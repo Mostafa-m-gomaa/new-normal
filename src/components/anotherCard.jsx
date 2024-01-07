@@ -9,6 +9,23 @@ const AnotherCard = ({ data, ind }) => {
   const [coupon, setCoupon] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const colors = ["#1748C1", "#87CEEA", "#FFB607"];
+  function convertTime(durationInDays) {
+    if (durationInDays > 1000) {
+      return "مدي الحياة";
+    }
+    if (durationInDays >= 365) {
+      const years = Math.floor(durationInDays / 365);
+      return `${years} سنة`;
+    } else if (durationInDays >= 30) {
+      const months = Math.floor(durationInDays / 30);
+      return `${months} شهر`;
+    } else if (durationInDays >= 7) {
+      const weeks = Math.floor(durationInDays / 7);
+      return `${weeks} أسبوع`;
+    } else {
+      return `${durationInDays} يوم`;
+    }
+  }
 
   const buyPackCard = () => {
     setLoading(true);
@@ -73,7 +90,7 @@ const AnotherCard = ({ data, ind }) => {
         data-aos-duration="300"
         data-aos-delay={300 * ind}
         dir="ltr"
-        className="bg-betMain border border-main p-8 rounded-lg  flex flex-col gap-8 justify-between "
+        className="bg-card border border-dark border-main p-8 rounded-lg  flex flex-col gap-8 justify-between "
       >
         <div className="space-y-8">
           <img src={data.image} className="w-full" alt="" />
@@ -107,6 +124,17 @@ const AnotherCard = ({ data, ind }) => {
               </li>
             ))} */}
           </ul>
+        </div>
+        <div>
+          <h2 className="text-2xl font-semibold flex justify-between object-contain">Telegram Channels</h2>
+        {data?.telegramChannelNames?.join(" - ")}
+        <h2 className="text-2xl font-semibold flex justify-between object-contain">مده صلاحية الكورس</h2>
+        {convertTime(data.expirationTime)}
+        <h2 className="text-2xl font-semibold flex justify-between object-contain">سعر اعادة التجديد</h2>
+        <div>
+        {data.renewPrice}$
+        </div>
+    
         </div>
         <button
           onClick={() => {

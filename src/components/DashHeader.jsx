@@ -1,11 +1,14 @@
 import logo from "../assets/logo.png";
-import { useState } from "react";
+import logoone from "../assets/anotherLogo.png";
+import { useContext, useState } from "react";
 import ProfileMenu from "./ProfileMenu";
 import Sidebar from "./Sidebar";
 import { Link, NavLink } from "react-router-dom";
 import ThemeChanger from "./ThemeChanger";
+import { AppContext } from "../App";
 const DashHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {theme}=useContext(AppContext)
   const links = [
     { label: "الرئيسة", link: "/dashboard" },
     { label: "الدورات", link: "/education" },
@@ -40,9 +43,12 @@ const DashHeader = () => {
               >
                 <i className="fa-solid fa-xmark"></i>
               </button>
-              <Link to={"/dashboard"}>
+              {theme === "dark" ?  <Link to={"/dashboard"}>
+                <img src={logoone} alt="Logo" className="h-24 mx-auto mb-4" />
+              </Link> :  <Link to={"/dashboard"}>
                 <img src={logo} alt="Logo" className="h-24 mx-auto mb-4" />
-              </Link>
+              </Link> }
+            
               <ul className="flex flex-col mb-4  min-w-[200px] gap-4 text-xl font-semibold">
                 {links.map((link) => (
                   <li key={link.id}>
@@ -87,9 +93,12 @@ const DashHeader = () => {
             </li>
           ))}
         </ul>
-        <Link to={"/dashboard"}>
+        {theme === "dark" ?    <Link to={"/dashboard"}>
+          <img src={logoone} alt="Logo" className="h-10" />
+        </Link>:   <Link to={"/dashboard"}>
           <img src={logo} alt="Logo" className="h-10" />
-        </Link>
+        </Link>}
+      
       </div>
     </div>
   );

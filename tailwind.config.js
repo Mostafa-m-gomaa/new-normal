@@ -22,6 +22,7 @@ export default {
       red: "var(--red)",
       blue: "var(--blue)",
       white: "var(--white)",
+      card : "var(--card)"
     },
   },
   plugins: [],

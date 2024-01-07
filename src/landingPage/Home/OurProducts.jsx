@@ -5,11 +5,10 @@ import imageThree from "../../assets/products/product_3.png";
 import imageFour from "../../assets/products/product_4.png";
 const OurProducts = () => {
   const products = [
-    {
-      image: imageOne,
-      heading: "ادوات استثمارية مساعدة",
-      paragraph: "تحليلات الخبير للتطبيق",
-    },
+
+  
+ 
+    { image: imageFour, heading: "تعليم شامل للأسواق المالية ومدارس التحليل" },
     {
       image: imageTwo,
       heading: "محللين المستقبل",
@@ -21,7 +20,13 @@ const OurProducts = () => {
       heading: "خدمة الرد على استفسارات المتدربين",
       paragraph: "مجتمع المتدربين للنقاشات",
     },
-    { image: imageFour, heading: "تعليم شامل للأسواق المالية ومدارس التحليل" },
+    {
+      image: imageOne,
+      heading: "ادوات استثمارية مساعدة",
+      paragraph: "تحليلات الخبير للتطبيق",
+    } ,
+  
+  
   ];
   return (
     <section className="py-16 " id="productsSection">

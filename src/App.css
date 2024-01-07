@@ -305,6 +305,7 @@ html[data-theme="light"] {
     --goldenGray: #363431;
     --red: #ec2549;
     --blue: #1748c1;
+    --card : #212121;
   }
   :root[data-theme="light"] {
     /* --main: #eeecec; */
@@ -322,6 +323,7 @@ html[data-theme="light"] {
     --goldenGray: #363431;
     --red: #ec2549;
     --blue: #1748c1;
+    --card : white;
   }
 }
 .ecoTimeAndDate {

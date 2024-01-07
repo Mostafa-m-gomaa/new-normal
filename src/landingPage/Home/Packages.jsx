@@ -57,7 +57,7 @@ const Packages = () => {
           </p>
           <Link
             to={"/login"}
-            className="py-3 whitespace-nowrap group flex items-center gap-2 rounded-full bg-mainText text-main text-sm font-medium px-6"
+            className="max-w-fit py-3 whitespace-nowrap group flex items-center gap-2 rounded-full bg-mainText text-main text-sm font-medium px-6 absolute left-20	"
           >
             <i className="text-xs transition-all group-hover:translate-x-1 duration-300 fa-solid fa-angle-right"></i>
             <span>ابدا الان</span>

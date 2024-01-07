@@ -36,7 +36,7 @@ const Courses = () => {
     <section className="pt-16" id="coursesSection">
       <div className="container ">
         <h2 className="flex-1 leading-tight mx-auto  md:text-4xl text-3xl lg:text-5xl text-center mb-10">
-          Packages{" "}
+         الباقات{" "}
         </h2>
         <p className="mx-auto text-sm sm:text-base text-center max-w-[1000px]">
           احصل على الوصول إلى الأدوات التي يمكن أن تساعدك على تقليل الديون ،

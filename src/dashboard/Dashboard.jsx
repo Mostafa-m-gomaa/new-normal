@@ -8,6 +8,7 @@ import teamwork from "../assets/teamwork.png";
 import training from "../assets/training.png";
 import './dash.css'
 import Faqs from "../landingPage/Home/Faqs";
+import Blog from "../landingPage/Blog";
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
   const [ads, setAds] = useState([]);
@@ -169,6 +170,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <Blog />
       <Faqs />
     </div>
   );
