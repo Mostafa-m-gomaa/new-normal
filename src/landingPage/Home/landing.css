@@ -1,0 +1,29 @@
+.logo{
+    margin: auto;
+}
+.logo-light{
+    margin: auto;
+    width: 650px;
+}
+.cards-cont{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+.cards-cont .product-card{
+    width: 25%;
+    padding: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.cards-cont .product-card h3{
+padding: 15px 0;
+font-size: 24px;
+font-weight: bolder;
+}
+.cards-cont .product-card img{
+    width: 90%;
+    margin: auto;
+    
+}
