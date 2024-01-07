@@ -6,7 +6,7 @@ import EconomicCalendar from "../components/EconomicCalendar";
 import trading from "../assets/trading.png";
 import teamwork from "../assets/teamwork.png";
 import training from "../assets/training.png";
-import './store/dash.css'
+import './dash.css'
 import Faqs from "../landingPage/Home/Faqs";
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
