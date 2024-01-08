@@ -15,7 +15,7 @@ const Packages = () => {
 
   return (
     <div>
-      <DashboardSlide />
+      {/* <DashboardSlide /> */}
       {packages.length === 0 && <LoadingSpinner />}
       <div className="grid  justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <>

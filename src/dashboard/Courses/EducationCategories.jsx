@@ -28,7 +28,7 @@ const EducationCategories = () => {
 
   return (
     <div>
-      <DashboardSlide />
+      {/* <DashboardSlide /> */}
       {!cates.length && (
         <div className="text-lightGray text-4xl my-20 text-center w-full">
           Can not find any products

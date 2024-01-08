@@ -7,6 +7,7 @@ import { AppContext, route } from "../App";
 import toast from "react-hot-toast";
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import DashboardSlide from "../components/DashboardSlide";
 
 const DashboardLayout = () => {
   const location = useLocation();
@@ -50,6 +51,7 @@ const DashboardLayout = () => {
   return (
     <>
       <DashHeader />
+      <DashboardSlide />
       <div className="container mx-auto pb-8">
         <Outlet />
       </div>

@@ -338,7 +338,7 @@ const PostCard = ({ post, date, isBlog }) => {
               </label>
             </div>
             <button
-              className="relative bg-lightGold text-gold pr-3 pl-16 font-semibold h-12 rounded-full"
+              className="relative bg-lightGold text-mainText pr-3 pl-16 font-semibold h-12 rounded-full"
               onClick={() => createComment(post._id)}
             >
               {updateId ? "عدل" : "أضف"}

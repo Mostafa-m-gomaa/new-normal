@@ -12,7 +12,7 @@ const DashHeader = () => {
   const links = [
     { label: "الرئيسة", link: "/dashboard" },
     { label: "الدورات", link: "/education" },
-    { label: "الكورسات", link: "/packages" },
+    { label: "الباكدجات", link: "/packages" },
     { label: "البث المباشر", link: "/lives" },
     { label: "تحليلات الأسواق", link: "/analytic" },
     { label: "شركاء النجاح", link: "/marketing" },

@@ -112,7 +112,7 @@ const SingelCourse = () => {
   };
   return (
     <div>
-      <DashboardSlide />
+      {/* <DashboardSlide /> */}
       {isOpen && (
         <div
           className="fixed w-full z-10 h-full top-0 right-0 flex items-center justify-center cursor-pointer"

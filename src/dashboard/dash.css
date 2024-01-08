@@ -12,11 +12,20 @@
     gap: 10px;
     width: 20%;
 }
-.counter img{
+.img-c{
+    padding: 10px;
     background-color: rgb(55, 82, 235);
-   border-radius: 50%;
-   padding: 10px;
-   width: 100px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 50%;
+    padding: 20px;
+    
+}
+.counter img{
+   
+ 
+   width: 70px;
+   /* height: 100px; */
    margin: auto;
 }
 .counter h2 , h4{

@@ -30,7 +30,7 @@ const Courses = () => {
 
   return (
     <div>
-      <DashboardSlide />
+      {/* <DashboardSlide /> */}
       {!courses?.length && (
         <div className="text-lightGray text-4xl my-20 text-center w-full">
           Can not find any courses in this category

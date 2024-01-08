@@ -94,23 +94,33 @@ const Dashboard = () => {
   }, [num3]);
   return (
     <div className="home-for-login" ref={contianer}>
-      <DashboardSlide />
+      {/* <DashboardSlide /> */}
       <div className="counter">
 <div className="counter-card">
+  <div className="img-c">
+
   <img src={trading} alt="" />
+  </div>
   <h2>{num1} +</h2>
   <h4>متداول ومحلل في مجتمعنا</h4>
 </div>
 <div className="counter-card">
-  <img src={training} alt="" />
-  <h2> {num2} + </h2>
-  <h4>متدرب في مستوياتنا الثلاث</h4>
-</div>
-<div className="counter-card">
+  <div className="img-c">
+
   <img src={teamwork} alt="" />
+  </div>
   <h2>{num3} +</h2>
   <h4>مشترك مھتم</h4>
 </div>
+<div className="counter-card">
+  <div className="img-c">
+
+  <img src={training} alt="" />
+  </div>
+  <h2> {num2} + </h2>
+  <h4>متدرب في مستوياتنا الثلاث</h4>
+</div>
+
       </div>
 
       <div className="flex flex-col-reverse lg:flex-row">
@@ -170,6 +180,8 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <h2 className=" md:text-4xl text-3xl lg:text-5xl">أخر المقالات</h2>
+
       <Blog />
       <Faqs />
     </div>
