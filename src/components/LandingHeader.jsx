@@ -24,7 +24,7 @@ const LandingHeader = () => {
     { name: "الرئيسية", id: "mainSection", target: "/" },
     { name: "تعرف علينا", id: "aboutUsSection", target: "/about-us" },
     { name: "الخدمات", id: "productsSection", target: "/" },
-    { name: "الباكدجات", id: "coursesSection", target: "/" },
+    { name: "الباقات", id: "coursesSection", target: "/" },
     { name: "الكورسات", id: "packagesSection", target: "/" },
     { name: "المدونة", id: "blogSection", target: "/blog" },
   ];
