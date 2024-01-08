@@ -90,7 +90,7 @@ const AnotherCard = ({ data, ind }) => {
         data-aos-duration="300"
         data-aos-delay={300 * ind}
         dir="ltr"
-        className="bg-card border border-dark border-main p-8 rounded-lg  flex flex-col gap-8 justify-between "
+        className="bg-card border border-dark  p-8 rounded-lg  flex flex-col gap-8 justify-between "
       >
         <div className="space-y-8">
           <img src={data.image} className="w-full" alt="" />
