@@ -102,7 +102,7 @@ const Dashboard = () => {
   <img src={trading} alt="" />
   </div>
   <h2>{num1} +</h2>
-  <h4>متداول ومحلل في مجتمعنا</h4>
+  <h4>متداول ومحلل </h4>
 </div>
 <div className="counter-card">
   <div className="img-c">

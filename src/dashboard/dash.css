@@ -44,3 +44,31 @@
 .counter h4{
 color: rgb(55, 82, 235);
 }
+
+@media only screen and (max-width: 600px) {
+    .counter{
+      flex-wrap: wrap;
+    }
+    .counter .counter-card{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 40%;
+    }
+    .counter img{
+   
+ 
+        width: 30px;
+        /* height: 100px; */
+        margin: auto;
+     }
+     .counter h2{
+
+        font-size: 20px;
+       
+       
+       }
+       .counter h4{
+    font-size: 20px;
+       }
+   }

@@ -3,6 +3,7 @@ import imageOne from "../../assets/products/product_1.png";
 import imageTwo from "../../assets/products/product_2.png";
 import imageThree from "../../assets/products/product_3.png";
 import imageFour from "../../assets/products/product_4.png";
+import './landing.css'
 const OurProducts = () => {
   const products = [
 
