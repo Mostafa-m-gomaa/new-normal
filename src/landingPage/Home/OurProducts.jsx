@@ -81,7 +81,7 @@ const OurProducts = () => {
                  
                 />{" "}
                 
-                  <h3 className="text-gold">
+                  <h3 className="text-mainText">
                     {product.heading}
                   </h3>
                   <p>
