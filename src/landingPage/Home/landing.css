@@ -5,6 +5,11 @@
     margin: auto;
     width: 650px;
 }
+.laptop-image{
+    /* overflow: hidden; */
+    /* border-radius: 1000px 10px 0 0; */
+    
+}
 .cards-cont{
     display: flex;
     justify-content: center;

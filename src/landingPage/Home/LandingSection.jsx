@@ -4,7 +4,8 @@ import logo2 from "../../assets/logo2.jpg";
 import { useTransform, useScroll, motion } from "framer-motion";
 import { AppContext } from "../../App";
 import './landing.css'
-import './landing.css'
+import im from '../../assets/WhatsApp Image 2024-01-09 at 15.49.32_d0297305.jpg'
+
 
 const LandingSection = () => {
   const container = useRef(null);
@@ -59,14 +60,12 @@ const LandingSection = () => {
           <div className="relative">
             <div
               className="absolute opacity-60 w-[100%] h-[100%] top-[50%]  right-[50%] translate-x-[50%] -translate-y-[50%]"
-              style={{
-                background:
-                  "radial-gradient(50% 47% at 50% 50%,rgba(61,61,61,.9) 0%,rgba(23,23,23,.2) 100%)",
-              }}
+           
             />
             <motion.img
-              className="mx-auto transition-all relative z-[2]"
+              className="mx-auto transition-all relative z-[2] laptop-image"
               src="https://thenewnormal.trade/new/wp-content/uploads/2023/08/laptop.png"
+              // src={im}
               alt=""
             />
           </div>

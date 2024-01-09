@@ -5,6 +5,7 @@
     gap: 50px;
     padding: 15px 0;
     border-radius: 10px;
+    align-items: center;
 }
 .counter .counter-card{
     display: flex;
@@ -43,11 +44,13 @@
 }
 .counter h4{
 color: rgb(55, 82, 235);
+font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {
     .counter{
       flex-wrap: wrap;
+      align-items: center;
     }
     .counter .counter-card{
         display: flex;
@@ -71,4 +74,21 @@ color: rgb(55, 82, 235);
        .counter h4{
     font-size: 20px;
        }
+   }
+   
+   @media only screen and (max-width: 1012px) {
+    .counter{
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .counter .counter-card{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 40%;
+      }
+      .counter h4{
+        font-size: 20px;
+        }
+
    }
