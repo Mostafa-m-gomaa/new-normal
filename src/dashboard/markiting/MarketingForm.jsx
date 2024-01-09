@@ -74,7 +74,7 @@ const MarketingForm = () => {
             required
             minLength={2}
             onChange={(e) => setValues(e.target.value, "fullName")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
         <div className="space-y-3">
@@ -86,7 +86,7 @@ const MarketingForm = () => {
               type="text"
               placeholder="البلد"
               onChange={(e) => setValues(e.target.value, "country")}
-              className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+              className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
             />
             <input
               required
@@ -94,7 +94,7 @@ const MarketingForm = () => {
               type="text"
               placeholder="المدينة"
               onChange={(e) => setValues(e.target.value, "city")}
-              className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+              className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
             />
           </div>
         </div>
@@ -104,7 +104,7 @@ const MarketingForm = () => {
             required
             type="date"
             onChange={(e) => setValues(e.target.value, "birthDate")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
         <div className="space-y-3">
@@ -115,7 +115,7 @@ const MarketingForm = () => {
             minLength={5}
             required
             onChange={(e) => setValues(e.target.value, "currentWork")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
         <div className="space-y-3">
@@ -129,7 +129,7 @@ const MarketingForm = () => {
             required
             minLength={50}
             onChange={(e) => setValues(e.target.value, "ansOfQuestion")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
 
@@ -140,7 +140,7 @@ const MarketingForm = () => {
             placeholder="https://example"
             required
             onChange={(e) => setValues(e.target.value, "instgram")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
         <div className="space-y-3">
@@ -150,7 +150,7 @@ const MarketingForm = () => {
             placeholder="https://example"
             required
             onChange={(e) => setValues(e.target.value, "tiktok")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
         <div className="space-y-3">
@@ -160,7 +160,7 @@ const MarketingForm = () => {
             placeholder="https://example"
             required
             onChange={(e) => setValues(e.target.value, "telegram")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
         <div className="space-y-3">
@@ -170,7 +170,7 @@ const MarketingForm = () => {
             required
             // accept=".pdf"
             onChange={(e) => setValues(e.target.files[0], "identity")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
         <div className="space-y-3">
@@ -180,7 +180,7 @@ const MarketingForm = () => {
             required
             // accept=".pdf"
             onChange={(e) => setValues(e.target.files[0], "cv")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
         <div className="space-y-3">
@@ -188,7 +188,7 @@ const MarketingForm = () => {
           <select
             required
             onChange={(e) => setValues(e.target.value, "paymentMethod")}
-            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+            className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           >
             <option value="" disabled selected></option>
             <option value="wise">wise</option>

@@ -53,7 +53,7 @@ const LandingSection = () => {
               />
             )}
             <h1 className="text-4xl text-mainText font-semibold text-center mb-4 -translate-y-6 sayed">
-              Get USESD TO THE FUTURE
+              GET USESD TO THE FUTURE
             </h1>
           </motion.div>
 
