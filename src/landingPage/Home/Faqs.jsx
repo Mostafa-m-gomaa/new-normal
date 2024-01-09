@@ -10,6 +10,7 @@ const Faqs = () => {
       .then((res) => res.json())
       .then((data) => {
         setFaqs(data.data);
+       
       });
   }, []);
   return (

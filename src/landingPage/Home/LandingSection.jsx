@@ -4,6 +4,7 @@ import logo2 from "../../assets/logo2.jpg";
 import { useTransform, useScroll, motion } from "framer-motion";
 import { AppContext } from "../../App";
 import './landing.css'
+import './landing.css'
 
 const LandingSection = () => {
   const container = useRef(null);
@@ -29,12 +30,13 @@ const LandingSection = () => {
     >
       <div ref={container} className="container   mx-auto">
         <div>
-          <motion.div
-            className="relative z-[1]"
-            style={{
+        {/* style={{
               translateY: imageTranslateY,
               scale: imageScale,
-            }}
+            }} */}
+          <motion.div
+            className="relative z-[1] logo-container"
+        
           >
             {theme === "light" ? (
               <img
@@ -49,7 +51,7 @@ const LandingSection = () => {
                 alt=""
               />
             )}
-            <h1 className="text-4xl text-mainText font-semibold text-center mb-4 -translate-y-6">
+            <h1 className="text-4xl text-mainText font-semibold text-center mb-4 -translate-y-6 sayed">
               Get USESD TO THE FUTURE
             </h1>
           </motion.div>

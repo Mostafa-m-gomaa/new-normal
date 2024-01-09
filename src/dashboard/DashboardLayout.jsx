@@ -51,7 +51,7 @@ const DashboardLayout = () => {
   return (
     <>
       <DashHeader />
-      <DashboardSlide />
+      {/* <DashboardSlide /> */}
       <div className="container mx-auto pb-8">
         <Outlet />
       </div>

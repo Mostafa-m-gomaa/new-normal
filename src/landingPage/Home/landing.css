@@ -30,6 +30,7 @@ font-weight: bolder;
 .faq-h{
  
     text-align: right;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -39,5 +40,13 @@ font-weight: bolder;
    .cards-cont .product-card{
     width: 50%;
 
+}
+.logo-container{
+  
+    
+}
+.sayed{
+    font-size: 20px !important;
+    margin: 25px 0;
 }
   }

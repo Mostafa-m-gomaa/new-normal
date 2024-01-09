@@ -94,7 +94,7 @@ const Dashboard = () => {
   }, [num3]);
   return (
     <div className="home-for-login" ref={contianer}>
-      {/* <DashboardSlide /> */}
+      <DashboardSlide />
       <div className="counter">
 <div className="counter-card">
   <div className="img-c">
