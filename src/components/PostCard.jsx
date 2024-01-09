@@ -332,7 +332,7 @@ const PostCard = ({ post, date, isBlog }) => {
               />
               <label
                 htmlFor="file-input"
-                className="w-12 h-12 flex items-center justify-center text-xl text-center capitalize m-auto text-dark bg-gold rounded-full cursor-pointer"
+                className="w-12 h-12 flex items-center justify-center text-xl text-center capitalize m-auto text-mainText bg-lightGold rounded-full cursor-pointer"
               >
                 <i className="fa-solid fa-image"></i>
               </label>
@@ -342,7 +342,7 @@ const PostCard = ({ post, date, isBlog }) => {
               onClick={() => createComment(post._id)}
             >
               {updateId ? "عدل" : "أضف"}
-              <div className="absolute bg-gold text-dark w-12 h-12 flex justify-center items-center rounded-full top-0 left-0">
+              <div className="absolute bg-lightGold text-mainText w-12 h-12 flex justify-center items-center rounded-full top-0 left-0">
                 <i className=" fa-solid fa-paper-plane"></i>
               </div>
             </button>
