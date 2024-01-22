@@ -31,7 +31,7 @@ const OurProducts = () => {
   ];
   return (
     <section className="py-16 " id="productsSection">
-      <div className="container mx-auto">
+      <div className="our-pro container mx-auto">
         <div>
           <div className="flex my-12 items-center gap-8">
             <div className="flex-1">

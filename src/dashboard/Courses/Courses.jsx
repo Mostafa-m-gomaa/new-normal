@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext, route } from "../../App";
 import DashboardSlide from "../../components/DashboardSlide";
 import { Link, useParams } from "react-router-dom";
+import gr from '../../assets/gr.png'
 
 const Courses = () => {
   const { setLoading } = useContext(AppContext);
@@ -24,6 +25,7 @@ const Courses = () => {
       .then((res) => res.json())
       .then((data) => {
         setCourses(data.data);
+        console.log(data.data);
       })
       .finally(() => setLoading(false));
   }, []);
@@ -44,6 +46,8 @@ const Courses = () => {
               className="col-span-1 p-2 border border-gray rounded-2xl"
               key={course._id}
             >
+              {course.image ? <img src={course.image} alt="" /> :<img src={gr} alt="" /> }
+              
               <div className="category" key={course._id}>
                 <h2 className="text-center p-2 sm:text-lg md:text-xl lg:text-2xl">
                   {course.title}

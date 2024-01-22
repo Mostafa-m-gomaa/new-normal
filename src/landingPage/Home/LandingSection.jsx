@@ -4,7 +4,7 @@ import logo2 from "../../assets/logo2.jpg";
 import { useTransform, useScroll, motion } from "framer-motion";
 import { AppContext } from "../../App";
 import './landing.css'
-import im from '../../assets/WhatsApp Image 2024-01-09 at 15.49.32_d0297305.jpg'
+import im from '../../assets/nnn.jpg'
 
 
 const LandingSection = () => {
@@ -64,7 +64,7 @@ const LandingSection = () => {
             />
             <motion.img
               className="mx-auto transition-all relative z-[2] laptop-image"
-              src="https://thenewnormal.trade/new/wp-content/uploads/2023/08/laptop.png"
+              src={im}
               // src={im}
               alt=""
             />

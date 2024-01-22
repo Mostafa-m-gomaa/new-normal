@@ -41,6 +41,7 @@ import LegalAndPrivacy from "./landingPage/LegalAndPrivacy";
 import BlogDetails from "./landingPage/BlogDetails";
 import Broker from "./dashboard/borker/Broker";
 import Weakly from "./dashboard/Weakly";
+import CoursePack from "./dashboard/coursePackage";
 // *******production
 export const route = "https://apiTest.wealthmakers-fx.com/api/v1/";
 // export const route = "https://apitest.wealthmakers-fx.com/api/v1/";
@@ -172,10 +173,11 @@ export default function App() {
             <Route path="/store/:id" element={<ProductPage />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/education" element={<EducationCategories />} />
-            <Route path="/education/:catId" element={<Courses />} />
+            {/* <Route path="/education" element={<EducationCategories />} /> */}
+            <Route path="/education" element={<CoursePack/>} />
+            <Route path="/viewPack/:catId" element={<Courses />} />
             <Route
-              path="/education/:catId/course/:courseId"
+              path="/viewPack/:catId/course/:courseId"
               element={<SingelCourse />}
             />
             <Route path="/courses" element={<Courses />} />

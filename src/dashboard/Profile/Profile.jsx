@@ -34,7 +34,7 @@ const Profile = () => {
 
   return (
     <div className="p-4 w-full">
-      <div className="bg-dark border rounded-xl p-4 border-gray">
+      <div className=" border rounded-xl p-4 border-gray">
         <div className="relative w-[150px] h-[150px] bg-gray border border-gold mx-auto rounded-full flex justify-center items-center">
           <i className="text-6xl fa-solid fa-user"></i>
           <img
@@ -79,7 +79,7 @@ const Profile = () => {
             href={`https://t.me/WealthMakerFXCompanyBOT?start=${data._id}`}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center w-[200px] h-[40px] bg-gold text-dark gap-4 font-semibold rounded-2xl"
+            className="flex items-center justify-center w-[200px] h-[40px] bg-gold text-main gap-4 font-semibold rounded-2xl"
           >
             <i className="fa-solid fa-robot"></i>
             روبوت التيليغرام

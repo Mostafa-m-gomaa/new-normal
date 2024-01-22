@@ -25,8 +25,8 @@ const MyProducts = () => {
   }, []);
 
   return (
-    <div className="bg-dark border rounded-xl p-4 border-gray my-10">
-      <h1 className="text-2xl text-gold bg-lightGold w-fit px-5 py-3 pb-4 rounded-2xl">
+    <div className=" border rounded-xl p-4 border-gray my-10">
+      <h1 className="text-2xl text-mainText bg-lightGold w-fit px-5 py-3 pb-4 rounded-2xl">
         مشترياتي
       </h1>
       {isLoading && <LoadingSpinner />}

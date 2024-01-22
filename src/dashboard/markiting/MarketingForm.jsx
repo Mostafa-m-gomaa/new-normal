@@ -62,7 +62,7 @@ const MarketingForm = () => {
       </h2>
       <p className="text-[gray] text-sm my-6 ">
         ملاحظه يجب ان تكون معلوماتك مطابقه للوثائق الرسميه التي سوف تقدمها (هويه
-        ، جواز سفر ، اجازه سائق) و تغيير هذه المعلومات يكون حصرا عن طريق البريد
+        ، جواز سفر ، رخصة قياده) و تغيير هذه المعلومات يكون حصرا عن طريق البريد
         الالكتروني والتواصل مع الشركه
       </p>
       <form className="space-y-4" onSubmit={(e) => onSubmit(e)}>
@@ -120,8 +120,8 @@ const MarketingForm = () => {
         </div>
         <div className="space-y-3">
           <label>
-            لماذا تود ان تكون مرشد للتداول ف الاسواق الماليه مع مؤسسه the new
-            normal :
+          - لماذا تريد ان تكون شريك نجاح مع THE NEW NORMAL ؟
+
           </label>
           <input
             type="text"
@@ -134,7 +134,7 @@ const MarketingForm = () => {
         </div>
 
         <div className="space-y-3">
-          <label>حسابك علي انستجرام :</label>
+          <label>Instagram</label>
           <input
             type="text"
             placeholder="https://example"
@@ -144,7 +144,7 @@ const MarketingForm = () => {
           />
         </div>
         <div className="space-y-3">
-          <label>حسابك علي تيكتوك :</label>
+          <label>TikTok</label>
           <input
             type="text"
             placeholder="https://example"
@@ -154,7 +154,7 @@ const MarketingForm = () => {
           />
         </div>
         <div className="space-y-3">
-          <label>حسابك علي تيليجرام :</label>
+          <label>Telegram</label>
           <input
             type="text"
             placeholder="https://example"
@@ -163,7 +163,7 @@ const MarketingForm = () => {
             className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
         </div>
-        <div className="space-y-3">
+        {/* <div className="space-y-3">
           <label>إثبات الهوية : (Pdf)</label>
           <input
             type="file"
@@ -172,7 +172,7 @@ const MarketingForm = () => {
             onChange={(e) => setValues(e.target.files[0], "identity")}
             className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
-        </div>
+        </div> */}
         <div className="space-y-3">
           <label>Cv : (Pdf)</label>
           <input

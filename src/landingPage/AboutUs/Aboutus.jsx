@@ -24,7 +24,7 @@ const AboutUs = () => {
         <h2 className="text-xl text-center sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
           هدفنا هو
         </h2>
-        <div className="p-8 bg-betMain border border-mainBorders my-10 rounded-xl gap-8 gap-y-8 grid sm:grid-cols-2 md:grid-cols-3">
+        <div className="p-8  border border-mainBorders my-10 rounded-xl gap-8 gap-y-8 grid sm:grid-cols-2 md:grid-cols-3">
           <div className="flex flex-col items-center justify-center gap-8">
             <i className="fa-solid fa-school  text-2xl"></i>
             <h4 className="text-lg font-semibold">

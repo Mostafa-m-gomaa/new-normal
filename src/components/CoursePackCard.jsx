@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import App, { AppContext, route } from "../App";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
+import CoursePack from "../dashboard/coursePackage";
 
-const PackageCard = ({ data, ind }) => {
+const CoursePackCard = ({ data, ind }) => {
   const { setLoading } = useContext(AppContext);
   const token = localStorage.getItem("token");
   const [coupon, setCoupon] = useState("");
@@ -82,12 +83,7 @@ const PackageCard = ({ data, ind }) => {
 
           <p className="text-sm">{data?.description}</p>
           <ul>
-            <li className="text-lg flex justify-between items-center py-3 border-b border-b-mainBorders">
-              مده صلاحيه الكورس {data?.expirationTime} يوم
-            </li>
-            <li className="text-lg flex justify-between items-center py-3 border-b border-b-mainBorders">
-              سعر إعاده الاشتراك {data?.renewPrice} دولار
-            </li>
+      
             {/* {data?.courses?.map((coures) => (
               <li
                 key={coures._id}
@@ -172,4 +168,4 @@ const PackageCard = ({ data, ind }) => {
   );
 };
 
-export default PackageCard;
+export default CoursePackCard;

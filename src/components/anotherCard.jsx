@@ -90,7 +90,7 @@ const AnotherCard = ({ data, ind }) => {
         data-aos-duration="300"
         data-aos-delay={300 * ind}
         dir="ltr"
-        className="bg-card border border-dark  p-8 rounded-lg  flex flex-col gap-8 justify-between "
+        className=" border border-mainText  p-8 rounded-lg  flex flex-col gap-8 justify-between "
       >
         <div className="space-y-8">
           <img src={data.image} className="w-full" alt="" />
@@ -107,14 +107,14 @@ const AnotherCard = ({ data, ind }) => {
             <li className="text-lg flex justify-between items-center py-3 border-b border-b-mainBorders">
               سعر إعاده الاشتراك {data?.renewPrice} دولار
             </li> */}
-            {data?.courses?.map((coures) => (
+            {/* {data?.courses?.map((coures) => (
               <li
                 key={coures._id}
                 className="text-lg flex justify-between items-center py-3 border-b border-b-mainBorders"
               >
                 {coures?.title}
               </li>
-            ))}
+            ))} */}
             {/* {data?.telegramChannelNames?.map((channel, ind) => (
               <li
                 key={ind}
@@ -128,8 +128,10 @@ const AnotherCard = ({ data, ind }) => {
         <div>
           <h2 className="text-2xl font-semibold flex justify-between object-contain">Telegram Channels</h2>
         {data?.telegramChannelNames?.join(" - ")}
+        <hr />
         <h2 className="text-2xl font-semibold flex justify-between object-contain">مده صلاحية الكورس</h2>
         {convertTime(data.expirationTime)}
+        <hr />
         <h2 className="text-2xl font-semibold flex justify-between object-contain">سعر اعادة التجديد</h2>
         <div>
         {data.renewPrice}$

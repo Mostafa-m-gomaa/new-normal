@@ -73,7 +73,7 @@ const Footer = () => {
             </h2>
           </div>
 
-          <div>
+          <div className="text-center">
             <h4 className="text-mainText text-xl mb-4">الشركة </h4>
             <ul className="space-y-2">
               <li>
@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="text-center">
             <h4 className="text-mainText text-xl mb-4">القوانين</h4>
             <ul className="space-y-2">
               <li>

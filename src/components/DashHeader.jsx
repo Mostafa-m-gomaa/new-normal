@@ -11,7 +11,7 @@ const DashHeader = () => {
   const {theme}=useContext(AppContext)
   const links = [
     { label: "الرئيسة", link: "/dashboard" },
-    { label: "الكورسات", link: "/education" },
+    { label: "الدورات", link: "/education" },
     { label: "الباقات", link: "/packages" },
     { label: "البث المباشر", link: "/lives" },
     { label: "تحليلات الأسواق", link: "/analytic" },

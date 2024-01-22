@@ -7,7 +7,7 @@ import AnotherCard from "../../components/anotherCard";
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch(`${route}education/courses`)
+    fetch(`${route}education/packages`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -45,7 +45,7 @@ const Courses = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses?.map((item, ind) => (
-            <AnotherCard key={item._id} ind={ind} data={item} />
+           item.type === "package" ?  <AnotherCard key={item._id} ind={ind} data={item} />:null
           ))}
         </div>
         {/* <div className="max-w-[95vw] mx-auto overflow-x-auto overflow-y-visible my-16">

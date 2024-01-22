@@ -168,7 +168,7 @@ const AddReview = () => {
         </div>
       )}
       <div
-        className="cursor-pointer flex items-center justify-center w-[200px] h-[40px] bg-gold text-dark gap-4 font-semibold rounded-2xl"
+        className="cursor-pointer flex items-center justify-center w-[200px] h-[40px] bg-gold text-main gap-4 font-semibold rounded-2xl"
         onClick={() => setIsOpen(true)}
       >
         <i className="fa-solid fa-star"></i> تقييم الموقع
