@@ -24,6 +24,7 @@ const PackageCard = ({ data, ind }) => {
     })
       .then((res) => res.json())
       .then((red) => {
+        console.log(red);
         if (red?.message) {
           toast.error(red?.message);
         }

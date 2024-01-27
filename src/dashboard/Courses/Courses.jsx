@@ -39,10 +39,10 @@ const Courses = () => {
         </div>
       )}
       <div className="border border-gray rounded-2xl bg-main p-2 md:p-6  m-2  md:m-6 gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid">
-        {courses?.map((course) => {
+        {courses?.map((course ,index) => {
           return (
             <Link
-              to={`course/${course._id}`}
+              to={index === 0 ? `course/${"bro"}/${course._id}`: `course/${"noBro"}/${course._id}` }
               className="col-span-1 p-2 border border-gray rounded-2xl"
               key={course._id}
             >

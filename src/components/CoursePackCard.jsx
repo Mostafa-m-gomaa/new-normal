@@ -25,11 +25,12 @@ const CoursePackCard = ({ data, ind }) => {
     })
       .then((res) => res.json())
       .then((red) => {
+        console.log(red);
         if (red?.message) {
           toast.error(red?.message);
         }
         if (red?.status == "success") {
-          window.location.href = red?.session?.url;
+          // window.location.href = red?.session?.url;
         }
       })
       .catch((err) => {
@@ -55,11 +56,12 @@ const CoursePackCard = ({ data, ind }) => {
     })
       .then((res) => res.json())
       .then((red) => {
+        console.log(red);
         if (red?.message) {
           toast.error(red?.message);
         }
         if (red?.status == "success") {
-          window.location.href = red?.session?.hosted_url;
+          // window.location.href = red?.session?.hosted_url;
         }
       })
       .finally(() => {

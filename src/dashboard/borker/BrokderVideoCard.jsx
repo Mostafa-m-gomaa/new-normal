@@ -37,9 +37,9 @@ const BrokderVideoCard = ({ link, ind }) => {
           allowfullscreen="true"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        <button className="text-center mt-4 mx-auto block w-fit">
+        {/* <button className="text-center mt-4 mx-auto block w-fit">
           Open full screen
-        </button>
+        </button> */}
       </div>
     </>
   );

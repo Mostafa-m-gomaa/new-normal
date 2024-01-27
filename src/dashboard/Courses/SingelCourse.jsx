@@ -14,6 +14,7 @@ const SingelCourse = () => {
   const [data, setData] = useState({});
   const token = localStorage.getItem("token");
   const courseId = useParams().courseId;
+  const brok = useParams().bro;
   const [isOpen, setIsOpen] = useState(false);
   const [coupon, setCoupon] = useState("");
 
@@ -199,7 +200,7 @@ const SingelCourse = () => {
                 return (
                   <LessonCard
                     key={lesson._id}
-                    showBroker={ind == 0}
+                    showBroker={ind == 0 && brok == "bro"}
                     lesson={lesson}
                   />
                 );

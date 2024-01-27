@@ -48,7 +48,61 @@ const Dashboard = () => {
       });
   }, [token]);
 
+  useEffect(() => {
+    fetch(`${route}/systemNumber`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.data[0].analyticals) {
+           const analytic = data.data[0].analyticals;
+    const interval = setInterval(() => {
+      if (num3 < analytic) {
+        setNum3((prevCount) => prevCount + 10);
+      } else {
+        clearInterval(interval); // Stop the interval when num1 reaches 40
+      }
+    }, 0.001); // Adjust the interval delay as needed, e.g., 100 milliseconds
 
+    return () => clearInterval(interval);
+
+
+  }
+      });
+  }, []);
+
+
+ 
+
+  // if (data.data[0].interests) {
+  //   const interval = setInterval(() => {
+  //     if (num1 <data.data[0].interests) {
+  //       setNum1((prevCount) => prevCount + 5);
+  //     } else {
+  //       clearInterval(interval); // Stop the interval when num1 reaches 40
+  //     }
+  //   }, 0.01); // Adjust the interval delay as needed, e.g., 100 milliseconds
+
+  //   return () => clearInterval(interval);
+
+
+  // }
+  // if (data.data[0].trainees) {
+  //   const interval = setInterval(() => {
+  //     if (num2 < data.data[0].trainees) {
+  //       setNum2((prevCount) => prevCount + 100);
+  //     } else {
+  //       clearInterval(interval); // Stop the interval when num1 reaches 40
+  //     }
+  //   }, 0.001); // Adjust the interval delay as needed, e.g., 100 milliseconds
+
+  //   return () => clearInterval(interval);
+
+  // }
   // ...
 
   // useEffect(() => {
@@ -59,39 +113,39 @@ const Dashboard = () => {
   //   }, 0.001);
   //   return () => clearInterval(interval);
   // }, []);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (num1 < 4000) {
-        setNum1((prevCount) => prevCount + 5);
-      } else {
-        clearInterval(interval); // Stop the interval when num1 reaches 40
-      }
-    }, 0.01); // Adjust the interval delay as needed, e.g., 100 milliseconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (num1 < 4000) {
+  //       setNum1((prevCount) => prevCount + 5);
+  //     } else {
+  //       clearInterval(interval); // Stop the interval when num1 reaches 40
+  //     }
+  //   }, 0.01); // Adjust the interval delay as needed, e.g., 100 milliseconds
 
-    return () => clearInterval(interval);
-  }, [num1]);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (num2 < 23624) {
-        setNum2((prevCount) => prevCount + 100);
-      } else {
-        clearInterval(interval); // Stop the interval when num1 reaches 40
-      }
-    }, 0.001); // Adjust the interval delay as needed, e.g., 100 milliseconds
+  //   return () => clearInterval(interval);
+  // }, [num1]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (num2 < 23624) {
+  //       setNum2((prevCount) => prevCount + 100);
+  //     } else {
+  //       clearInterval(interval); // Stop the interval when num1 reaches 40
+  //     }
+  //   }, 0.001); // Adjust the interval delay as needed, e.g., 100 milliseconds
 
-    return () => clearInterval(interval);
-  }, [num2]);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (num3 < 10000) {
-        setNum3((prevCount) => prevCount + 10);
-      } else {
-        clearInterval(interval); // Stop the interval when num1 reaches 40
-      }
-    }, 0.001); // Adjust the interval delay as needed, e.g., 100 milliseconds
+  //   return () => clearInterval(interval);
+  // }, [num2]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (num3 < 10000) {
+  //       setNum3((prevCount) => prevCount + 10);
+  //     } else {
+  //       clearInterval(interval); // Stop the interval when num1 reaches 40
+  //     }
+  //   }, 0.001); // Adjust the interval delay as needed, e.g., 100 milliseconds
 
-    return () => clearInterval(interval);
-  }, [num3]);
+  //   return () => clearInterval(interval);
+  // }, [num3]);
   return (
     <div className="home-for-login" ref={contianer}>
       <DashboardSlide />
