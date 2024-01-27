@@ -25,7 +25,7 @@ const LandingHeader = () => {
     { name: "تعرف علينا", id: "aboutUsSection", target: "/about-us" },
     { name: "الخدمات", id: "productsSection", target: "/" },
     { name: "الباقات", id: "coursesSection", target: "/" },
-    { name: "الكورسات", id: "packagesSection", target: "/" },
+    { name: "الدورات", id: "packagesSection", target: "/" },
     { name: "المدونة", id: "blogSection", target: "/blog" },
   ];
   const scrollToId = (id) => {

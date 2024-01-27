@@ -28,8 +28,8 @@ const PackageCard = ({ data, ind }) => {
         if (red?.message) {
           toast.error(red?.message);
         }
-        if (red?.status == "success") {
-          // window.location.href = red?.url;
+        else if (red.status === "success") {
+          window.location.href = red.url;
         }
       })
       .catch((err) => {
