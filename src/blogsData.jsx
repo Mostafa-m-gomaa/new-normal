@@ -1,8 +1,8 @@
-import imageOne from "./assets/blog/blog1.jpeg";
-import imageTwo from "./assets/blog/blog2.jpeg";
-import imageThree from "./assets/blog/blog3.jpeg";
-import imageFour from "./assets/blog/blog4.jpeg";
-import imageFive from "./assets/blog/blog5.jpeg";
+import imageOne from "./assets/blog/blog1.jpg";
+import imageTwo from "./assets/blog/blog2.jpg";
+import imageThree from "./assets/blog/blog3.jpg";
+import imageFour from "./assets/blog/blog4.jpg";
+import imageFive from "./assets/blog/blog5.jpg";
 export const blogs = [
   {
     image: imageOne,

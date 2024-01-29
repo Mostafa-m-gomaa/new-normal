@@ -127,6 +127,7 @@ const AnotherCard = ({ data, ind }) => {
         </div>
         <div>
           <h2 className="text-2xl font-semibold flex justify-between object-contain">Telegram Channels</h2>
+          {data.telegramChannelNames.length == 0 && "لا يوجد قنوات"}
         {data?.telegramChannelNames?.join(" - ")}
         <hr />
         <h2 className="text-2xl font-semibold flex justify-between object-contain">مده صلاحية الكورس</h2>

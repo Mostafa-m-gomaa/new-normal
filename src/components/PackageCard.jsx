@@ -100,6 +100,7 @@ const PackageCard = ({ data, ind }) => {
                 <h3 className="text-2xl font-semibold flex justify-between object-contain">
             Telegram Channel
           </h3>
+          {data.telegramChannelNames.length == 0 && "لا يوجد قنوات"}
             {data?.telegramChannelNames?.map((channel, ind) => (
               <li
                 key={ind}
