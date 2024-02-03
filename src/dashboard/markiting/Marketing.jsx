@@ -74,7 +74,7 @@ const Marketing = ({ myLog }) => {
             className="space-x-2 block w-fit mx-auto px-6 py-3 border border-gold rounded-xl text-gold font-semibold text-lg my-4"
             onClick={() => {
               navigator.clipboard.writeText(
-                `${window.location.origin}/login?inviteId=${myId}`
+                `${window.location.origin}/register?inviteId=${myId}`
               );
               toast.success("تم نسخ لينك الدعوه");
             }}
