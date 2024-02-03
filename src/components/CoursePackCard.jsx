@@ -43,30 +43,31 @@ const CoursePackCard = ({ data, ind }) => {
       });
   };
   const buyPackCr = () => {
-    setLoading(true);
-    fetch(`${route}education/orders/coinbase/${data._id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        coupon: coupon,
-      }),
-    })
-      .then((res) => res.json())
-      .then((red) => {
-        console.log(red);
-        if (red.message) {
-          toast.error(red?.message);
-        }
-       else if (red.status === "success") {
-          window.location.href = red.url;
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    // setLoading(true);
+    // fetch(`${route}education/orders/coinbase/${data._id}`, {
+    //   method: "PUT",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization: `Bearer ${token}`,
+    //   },
+    //   body: JSON.stringify({
+    //     coupon: coupon,
+    //   }),
+    // })
+    //   .then((res) => res.json())
+    //   .then((red) => {
+    //     console.log(red);
+    //     if (red.message) {
+    //       toast.error(red?.message);
+    //     }
+    //    else if (red.status === "success") {
+    //       window.location.href = red.url;
+    //     }
+    //   })
+    //   .finally(() => {
+    //     setLoading(false);
+    //   });
+    toast.error("This feature is not available yet");
   };
 
   return (

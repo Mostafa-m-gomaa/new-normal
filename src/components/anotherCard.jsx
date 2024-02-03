@@ -141,7 +141,7 @@ const AnotherCard = ({ data, ind }) => {
         </div>
         <button
           onClick={() => {
-            setIsOpen(true);
+            window.location.href = "/login";
           }}
           className="px-8 py-3 rounded-full text-main bg-mainText block w-fit mx-auto text-lg "
         >
