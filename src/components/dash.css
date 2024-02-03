@@ -4,7 +4,7 @@ position: relative;
 padding: 0;
 margin-bottom: 20px;
 z-index: -1;
-/* height: 500px; */
+height: 400px;
 
 }
 .img-cont .at-image-cont , .in-image-cont{
@@ -29,8 +29,9 @@ z-index: -1;
 
 }
 .img-cont img{
-    width: 100%;
+    width: 80%;
   height: 100%;
+  margin: auto;
 }
 .img-cont button{
     width: fit-content;
@@ -141,4 +142,7 @@ z-index: -1;
         color: rgb(0, 0, 0);
         }
 
+   }
+   .sos{
+    
    }
