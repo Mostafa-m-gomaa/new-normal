@@ -16,8 +16,8 @@ const MarketingForm = () => {
     instgram: "",
     tiktok: "",
     telegram: "",
-    identity: null,
-    cv: null,
+    identity: "",
+    cv: "",
     paymentMethod: "",
   });
   const setValues = function (value, key) {
