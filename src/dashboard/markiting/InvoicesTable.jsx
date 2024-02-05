@@ -94,16 +94,17 @@ const InvoicesTable = ({ data, getData }) => {
         <table className="text-center w-full my-6">
           <thead>
             <tr>
-              <th className=" border border-gray p-2">اجمالي مبلغ المبيعات</th>
-              <th className=" border border-gray p-2">المبيعات المباشره</th>
-              <th className=" border border-gray p-2">مبيعات المكتسبة</th>
-              <th className=" border border-gray p-2">النسبة</th>
-              <th className=" border border-gray p-2">الأرباح</th>
-              <th className=" border border-gray p-2">ارباح الشجره</th>
-              <th className=" border border-gray p-2">الأرباح من العملاء</th>
-              <th className=" border border-gray p-2">الارباح الكلية</th>
-              <th className=" border border-gray p-2">حالة الفاتوره</th>
-              <th className=" border border-gray p-2">التاريخ</th>
+              <th className=" border border-gray p-2">اجمالي المبيعات فوق 500</th>
+              <th className=" border border-gray p-2">اجمالي مبيعات تحت 500</th>
+              <th className=" border border-gray p-2">نسبة الربح فوق 500</th>
+              <th className=" border border-gray p-2">نسبة الربح تحت 500</th>
+              <th className=" border border-gray p-2">اجمالي الربح فوق 500</th>
+              <th className=" border border-gray p-2">اجمالي الربح تحت 500</th>
+              {/* <th className=" border border-gray p-2">الأرباح من العملاء</th> */}
+              {/* <th className=" border border-gray p-2">الارباح الكلية</th> */}
+              <th className=" border border-gray p-2">الوصف</th>
+              <th className=" border border-gray p-2">الحالة</th>
+              <th className=" border border-gray p-2">تاريخ الانشاء</th>
               <th className=" border border-gray p-2">تاريخ الدفع</th>
             </tr>
           </thead>
@@ -111,27 +112,28 @@ const InvoicesTable = ({ data, getData }) => {
             {data?.map((item) => (
               <tr key={item._id}>
                 <td className=" border border-gray p-2">
-                  ${item.totalSalesMoney}
+                  ${item.totalSalesMoneyGT500}
                 </td>
-                <td className=" border border-gray p-2">{item.mySales}</td>
+              
                 <td className=" border border-gray p-2">
-                  {item.customerSales}
+                  ${item.totalSalesMoneyLT500}
                 </td>
-                <td className=" border border-gray p-2">%{item.percentage}</td>
+              
                 <td className=" border border-gray p-2">
-                  ${item.direct_profits}
-                </td>
-                <td className=" border border-gray p-2">
-                  ${item.tree_profits}
+                  %{item.percentageGT500}
                 </td>
                 <td className=" border border-gray p-2">
-                  ${item.customers_profits}
+                  %{item.percentageLT500}
+                </td>
+                <td className=" border border-gray p-2">
+                  ${item.profitsGT500}
                 </td>
                 <td className=" border border-gray p-2">
                   $
-                  {item.tree_profits +
-                    item.direct_profits +
-                    item?.customers_profits}
+                  {item.profitsLT500}
+                </td>
+                <td className=" border border-gray p-2">
+                  {item.desc}
                 </td>
                 <td className=" border border-gray p-2 whitespace-nowrap">
                   {item.status === "paid" && "تم الدفع"}

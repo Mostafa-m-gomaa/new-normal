@@ -185,6 +185,11 @@ const Marketing = ({ myLog }) => {
 
               <InvoicesTable getData={getData} data={myData?.invoices} />
             </div> */}
+            <div className="space-y-4">
+              <h2 className="font-semibold text-center text-xl">الفواتير </h2>
+
+              <InvoicesTable getData={getData} data={myData?.invoices} />
+            </div>
           </>
         )}
         <Link
