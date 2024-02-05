@@ -4,7 +4,7 @@ import CardHandler from "./CartHandler";
 
 const ProductCard = ({ data }) => {
   return (
-    <div className="p-[16px] border bg-dark border-gray rounded-lg">
+    <div className="p-[16px] border bg-main border-gray rounded-lg">
       <Link to={`/store/${data._id}`}>
         <img
           src={data?.imageCover}

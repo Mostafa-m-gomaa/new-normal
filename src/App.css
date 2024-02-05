@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap') ;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +6,7 @@ body {
   overflow-x: hidden;
   max-width: 100vw;
   top: 0 !important;
+  font-family: "Cairo", sans-serif;
 }
 html {
   @apply bg-main;
@@ -128,8 +130,13 @@ html {
   text-transform: capitalize;
   overflow-x: auto;
   flex-wrap: nowrap;
-}
+  width: 80%;
+  margin: auto;
 
+}
+.cats .wrapper span{
+  color: white;
+}
 .cats .option {
   white-space: nowrap;
   width: 100%;
@@ -166,7 +173,7 @@ html {
 }
 
 .cats .input:checked + .btn .span {
-  color: var(--gold);
+  color: white;
 }
 * {
   box-sizing: border-box;

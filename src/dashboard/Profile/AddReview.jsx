@@ -142,7 +142,7 @@ const AddReview = () => {
                 required
                 onChange={(e) => setReview(e.target.value)}
                 placeholder="رايك في الموقع"
-                className="w-full bg-goldenGray px-4 pt-3 pb-4 text-xl pr-16 rounded-full placeholder:text-lightGray"
+                className="w-full bg-goldenGray px-4 pt-3 pb-4 text-xl text-white pr-16 rounded-full placeholder:text-lightGray"
               />
             </div>
             <div style={{ direction: "ltr" }}>
@@ -151,7 +151,7 @@ const AddReview = () => {
             </div>
             <button
               type="submit"
-              className="mt-6 w-full bg-gold py-4 rounded-full text-dark font-semibold text-xl"
+              className="mt-6 w-full bg-gold py-4 rounded-full text-white font-semibold text-xl"
             >
               {updateId ? "تعديل" : "ارسال"}
             </button>

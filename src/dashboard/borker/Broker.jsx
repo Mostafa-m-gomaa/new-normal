@@ -52,15 +52,16 @@ const Broker = () => {
         </div>
       ))}
       {data.length === 0 && (
-        <div className="text-lightGray text-4xl my-20 text-center w-full">
+        <div className="text-mainText text-4xl my-20 text-center w-full">
           <div>
 
           يرجى التواصل معنا لتوصيلك بالبروكر المناسب لك 
 حساب التلجرام
           </div>
-<a href="https://web.telegram.org/k/#@TheNewNormal2024bot">من هنا</a>
+<a href="https://t.me/TheNNsupport">من هنا</a>
         </div>
       )}
+       
     </>
   );
 };

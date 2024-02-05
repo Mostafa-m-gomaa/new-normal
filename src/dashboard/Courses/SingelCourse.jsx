@@ -15,6 +15,7 @@ const SingelCourse = () => {
   const token = localStorage.getItem("token");
   const courseId = useParams().courseId;
   const brok = useParams().bro;
+  // const [brok, setBrok] = useState(tr);
   const [isOpen, setIsOpen] = useState(false);
   const [coupon, setCoupon] = useState("");
 
@@ -28,6 +29,7 @@ const SingelCourse = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+     
         if (data?.msg === "you are not allowed to access this course") {
           setNotMine(true);
         }
@@ -49,6 +51,7 @@ const SingelCourse = () => {
         .then((res) => {
           console.log(res.data);
           setData(res.data);
+          
         })
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import { blogs } from "../blogsData";
+// import { blogs } from "../blogsData";
+import { blogs } from "../blData";
 import { useEffect, useRef } from "react";
 
 const BlogDetails = () => {

@@ -42,7 +42,7 @@ const Courses = () => {
         {courses?.map((course ,index) => {
           return (
             <Link
-              to={index === 0 ? `course/${"bro"}/${course._id}`: `course/${"noBro"}/${course._id}` }
+              to={course.showBroker ? `course/${"bro"}/${course._id}`: `course/${"noBro"}/${course._id}` }
               className="col-span-1 p-2 border border-gray rounded-2xl"
               key={course._id}
             >

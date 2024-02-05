@@ -61,7 +61,7 @@ const MyPackages = () => {
                 <h3 className="whitespace-nowrap border rounded  border-gray p-2">
                   ينتهي في : {humanReadableDate}
                 </h3>
-                <Link className="view" to={`/viewPack/${item._id}`}>View</Link>
+                <Link className="view " to={`/viewPack/${item._id}`}>View</Link>
               </div>
               {/* <div className="flex flex-wrap gap-4">
                 {item?.courses.map((course) => (

@@ -70,7 +70,7 @@ const EditData = () => {
           <form
             onSubmit={(e) => handelSubmit(e)}
             action=""
-            className="max-w-[450px]  my-8 md:my-0 mx-auto bg-blackGold p-6 flex items-center justify-center flex-col rounded-xl gap-5"
+            className="max-w-[450px] text-white  my-8 md:my-0 mx-auto bg-blackGold p-6 flex items-center justify-center flex-col rounded-xl gap-5"
           >
             <div
               onClick={() => setIsOpen(false)}
@@ -143,7 +143,7 @@ const EditData = () => {
 
             <button
               type="submit"
-              className="w-full bg-gold py-4 rounded-full text-dark font-semibold text-xl"
+              className="w-full bg-gold py-4 rounded-full text-main font-semibold text-xl"
             >
               تعديل
             </button>

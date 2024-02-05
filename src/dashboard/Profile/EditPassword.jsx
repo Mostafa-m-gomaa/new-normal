@@ -65,7 +65,7 @@ const EditPassword = () => {
                 required
                 onChange={(e) => setCurrent(e.target.value)}
                 placeholder="كلمة المرور الحالية"
-                className="w-full bg-goldenGray px-4 pt-3 pb-4 text-xl pr-16 rounded-full placeholder:text-lightGray"
+                className="w-full bg-goldenGray px-4 pt-3 pb-4 text-xl pr-16 rounded-full text-white placeholder:text-lightGray"
               />
             </div>
             <div className="relative  w-full">
@@ -77,7 +77,7 @@ const EditPassword = () => {
                 required
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="كلمة المرور الجديدة"
-                className="w-full bg-goldenGray px-4 pt-3 pb-4 text-xl pr-16 rounded-full placeholder:text-lightGray"
+                className="w-full text-white bg-goldenGray px-4 pt-3 pb-4 text-xl pr-16 rounded-full placeholder:text-lightGray"
               />
             </div>
             <div className="relative  w-full">
@@ -89,13 +89,13 @@ const EditPassword = () => {
                 required
                 onChange={(e) => setConfirm(e.target.value)}
                 placeholder="تاكيد كلمة المرور"
-                className="w-full bg-goldenGray px-4 pt-3 pb-4 text-xl pr-16 rounded-full placeholder:text-lightGray"
+                className="w-full text-white bg-goldenGray px-4 pt-3 pb-4 text-xl pr-16 rounded-full placeholder:text-lightGray"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gold py-4 rounded-full text-dark font-semibold text-xl"
+              className="w-full bg-gold py-4 rounded-full text-white font-semibold text-xl"
             >
               تعديل
             </button>
