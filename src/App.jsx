@@ -43,8 +43,8 @@ import Broker from "./dashboard/borker/Broker";
 import Weakly from "./dashboard/Weakly";
 import CoursePack from "./dashboard/coursePackage";
 // *******production
-export const route = "https://api.thenewnormal.trade/api/v1/";
-// export const route = "https://apiTest.wealthmakers-fx.com/api/v1/";
+// export const route = "https://api.thenewnormal.trade/api/v1/";
+export const route = "https://apiTest.wealthmakers-fx.com/api/v1/";
 
 export const AppContext = createContext();
 
