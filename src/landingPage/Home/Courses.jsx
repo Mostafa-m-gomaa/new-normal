@@ -43,6 +43,8 @@ const Courses = () => {
           وإصلاح وبناء الائتمان الخاص بك ، وإدارة ميزانياتك ، وتوفير المال ،
           وتحسين عاداتك المالية ، واحترف الاسواق المالية.
         </p>
+        <br />
+        <br />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses?.map((item, ind) => (
            item.type === "package" ?  <AnotherCard key={item._id} ind={ind} data={item} />:null

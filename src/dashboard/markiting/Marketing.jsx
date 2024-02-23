@@ -76,10 +76,10 @@ const Marketing = ({ myLog }) => {
               navigator.clipboard.writeText(
                 `${window.location.origin}/register?inviteId=${myId}`
               );
-              toast.success("تم نسخ لينك الدعوه");
+              toast.success("تم نسخ رابط الدعوه");
             }}
           >
-            اضغط هنا لتنسخ لينك دعوتك
+            اضغط هنا لتنسخ رابط دعوتكر
             <i className="fa-regular fa-copy"></i>
           </button>
         )}
