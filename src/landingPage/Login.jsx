@@ -31,11 +31,19 @@ const Login = () => {
         }
       )
       .then((res) => {
+        console.log(res);
         toast.success("Done");
         if (res.data) {
-          localStorage.setItem("data", JSON.stringify(res.data.data));
-          localStorage.setItem("token", res.data.token);
-          nav("/dashboard");
+          if(!res.data.data.telgram){
+          
+            nav("/telegram-active");
+          }
+          else{
+            localStorage.setItem("data", JSON.stringify(res.data.data));
+            localStorage.setItem("token", res.data.token);
+            nav("/dashboard");
+          }
+     
         }
       })
       .catch((err) => {

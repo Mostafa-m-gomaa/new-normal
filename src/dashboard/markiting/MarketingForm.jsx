@@ -191,7 +191,7 @@ const MarketingForm = () => {
             className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           >
             <option value="" disabled selected></option>
-            <option value="wise">wise</option>
+            <option value="paytab">Paytab</option>
             <option value="crypto">crypto</option>
           </select>
         </div>
