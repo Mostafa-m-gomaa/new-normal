@@ -313,6 +313,7 @@ html[data-theme="light"] {
     --red: #ec2549;
     --blue: #1748c1;
     --card : #212121;
+    --sayed : #ffffff;
   }
   :root[data-theme="light"] {
     /* --main: #eeecec; */
@@ -320,6 +321,7 @@ html[data-theme="light"] {
     --main-text: #000000;
     --main-borders: #575757;
     --sub-main: #ffffff;
+    --sayed : #000000;
     --bet-main: #eee7e7;
     --gold: #1b1a1a;
     --dark: #181818;

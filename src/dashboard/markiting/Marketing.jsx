@@ -79,8 +79,7 @@ const Marketing = ({ myLog }) => {
               toast.success("تم نسخ رابط الدعوه");
             }}
           >
-            اضغط هنا لتنسخ رابط دعوتكر
-            <i className="fa-regular fa-copy"></i>
+            اضغط هنا لتنسخ رابط دعوتك            <i className="fa-regular fa-copy"></i>
           </button>
         )}
         {(data.role === "marketer" || data.role === "admin") && (

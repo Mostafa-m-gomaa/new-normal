@@ -12,6 +12,7 @@ export default {
       subMain: "var(--sub-main)",
       betMain: "var(--bet-main)",
       mainText: "var(--main-text)",
+      sayed : "var(--sayed)",
       mainBorders: "var(--main-borders)",
       dark: "var(--dark)",
       gray: "var(--gray)",

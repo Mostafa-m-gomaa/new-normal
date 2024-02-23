@@ -76,14 +76,14 @@ const Profile = () => {
           <AddReview />
           <EditData />
           <a
-            href={`https://t.me/WealthMakerFXCompanyBOT?start=${data._id}`}
+            // href={`https://t.me/WealthMakerFXCompanyBOT?start=${data._id}`}
+            href={`https://t.me/The_New_Normal_bot?start=${data._id}`}
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center w-[200px] h-[40px] bg-gold text-main gap-4 font-semibold rounded-2xl"
           >
             <i className="fa-solid fa-robot"></i>
-            روبوت التيليغرام
-          </a>
+Telegram Bot          </a>
         </div>
       </div>
       <MyProducts />

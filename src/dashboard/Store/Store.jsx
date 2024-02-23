@@ -122,7 +122,7 @@ const Store = () => {
         </div>
       )}
       {!products.length && (
-        <div className="text-lightGray text-4xl my-20 text-center w-full">
+        <div className="text-sayed text-4xl my-20 text-center w-full">
           Can not find any products
         </div>
       )}
