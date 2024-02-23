@@ -34,7 +34,7 @@ const Login = () => {
         console.log(res);
         toast.success("Done");
         if (res.data) {
-          if(!res.data.data.telgram){
+          if(!res.data.data.telegram){
           
             nav("/telegram-active");
           }
