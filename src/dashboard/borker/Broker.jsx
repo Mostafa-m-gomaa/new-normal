@@ -58,7 +58,7 @@ const Broker = () => {
           يرجى التواصل معنا لتوصيلك بالبروكر المناسب لك 
 حساب التلجرام
           </div>
-<a href="https://t.me/TheNNsupport" style={{color : "blue"}}>من هنا</a>
+<a href="https://meet.google.com/czs-ewrm-pbf" style={{color : "blue"}}>من هنا</a>
         </div>
       )}
        
