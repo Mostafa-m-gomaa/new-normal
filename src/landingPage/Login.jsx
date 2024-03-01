@@ -34,13 +34,15 @@ const Login = () => {
         console.log(res);
         toast.success("Done");
         if (res.data) {
+          localStorage.setItem("data", JSON.stringify(res.data.data));
+          localStorage.setItem("token", res.data.token);
+          localStorage.setItem("id", res.data.data._id);
           if(!res.data.data.telegram){
           
             nav("/telegram-active");
           }
           else{
-            localStorage.setItem("data", JSON.stringify(res.data.data));
-            localStorage.setItem("token", res.data.token);
+
             nav("/dashboard");
           }
      
