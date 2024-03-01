@@ -6,7 +6,7 @@ const TeleActive = () => {
   return (
     <div className="w-full min-h-screen login relative flex items-center justify-center">
       <a
-        href={`https://t.me/WM_Authenticator_bot?start=${myId}`}
+        href={`https://t.me/The_New_Normal_bot?start=${myId}`}
         target="_blank"
         rel="noreferrer"
         className="relative z-10 bg-mainText py-4 rounded-full text-main font-semibold text-lg px-6 w-fit block mx-auto"

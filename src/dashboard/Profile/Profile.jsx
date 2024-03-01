@@ -76,7 +76,7 @@ const Profile = () => {
           <AddReview />
           <EditData />
           <a
-            // href={`https://t.me/WealthMakerFXCompanyBOT?start=${data._id}`}
+           
             href={`https://t.me/The_New_Normal_bot?start=${data._id}`}
             target="_blank"
             rel="noreferrer"
