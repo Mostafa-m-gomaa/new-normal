@@ -9,6 +9,7 @@ import training from "../assets/training.png";
 import './dash.css'
 import Faqs from "../landingPage/Home/Faqs";
 import Blog from "../landingPage/Blog";
+import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
   const [ads, setAds] = useState([]);
@@ -16,6 +17,7 @@ const Dashboard = () => {
   const [num1,setNum1]=useState(0)
   const [num2,setNum2]=useState(0)
   const [num3,setNum3]=useState(0)
+  const nav =useNavigate()
 
   // pagenation
   const [currentPage, setCurrentPage] = useState(1);
@@ -33,6 +35,9 @@ const Dashboard = () => {
       });
   }, [token]);
   useEffect(() => {
+    if(!localStorage.getItem("active")){
+ nav("/active")
+    }
     fetch(
       `${route}analytic/posts?sharedTo=home&page=${currentPage}&sort=-createdAt`,
       {
@@ -119,33 +124,33 @@ const Dashboard = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (num1 < 5000) {
-        setNum1((prevCount) => prevCount + 5);
+        setNum1((prevCount) => prevCount + 1);
       } else {
         clearInterval(interval); // Stop the interval when num1 reaches 40
       }
-    }, 0.01); // Adjust the interval delay as needed, e.g., 100 milliseconds
+    }, 0.00001); // Adjust the interval delay as needed, e.g., 100 milliseconds
 
     return () => clearInterval(interval);
   }, [num1]);
   useEffect(() => {
     const interval = setInterval(() => {
       if (num2 < 14853) {
-        setNum2((prevCount) => prevCount + 100);
+        setNum2((prevCount) => prevCount + 1);
       } else {
         clearInterval(interval); // Stop the interval when num1 reaches 40
       }
-    }, 0.001); // Adjust the interval delay as needed, e.g., 100 milliseconds
+    }, 0.0001); // Adjust the interval delay as needed, e.g., 100 milliseconds
 
     return () => clearInterval(interval);
   }, [num2]);
   useEffect(() => {
     const interval = setInterval(() => {
       if (num3 < 27825 ) {
-        setNum3((prevCount) => prevCount + 10);
+        setNum3((prevCount) => prevCount + 1);
       } else {
         clearInterval(interval); // Stop the interval when num1 reaches 40
       }
-    }, 0.001); // Adjust the interval delay as needed, e.g., 100 milliseconds
+    }, 0.0001); // Adjust the interval delay as needed, e.g., 100 milliseconds
 
     return () => clearInterval(interval);
   }, [num3]);
