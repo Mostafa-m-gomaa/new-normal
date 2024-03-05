@@ -38,8 +38,11 @@ const Login = () => {
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("id", res.data.data._id);
           if(!res.data.data.telegram){
-          
+            localStorage.removeItem("token")
             nav("/telegram-active");
+          }
+          else if(!res.data.data.active){
+nav("/active")
           }
           else{
 

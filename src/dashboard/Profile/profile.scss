@@ -1,6 +1,7 @@
 .pac-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
     .pa-card{
         width: 100%;

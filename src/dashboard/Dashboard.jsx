@@ -118,7 +118,7 @@ const Dashboard = () => {
   
   useEffect(() => {
     const interval = setInterval(() => {
-      if (num1 < 4000) {
+      if (num1 < 5000) {
         setNum1((prevCount) => prevCount + 5);
       } else {
         clearInterval(interval); // Stop the interval when num1 reaches 40
@@ -129,7 +129,7 @@ const Dashboard = () => {
   }, [num1]);
   useEffect(() => {
     const interval = setInterval(() => {
-      if (num2 < 23624) {
+      if (num2 < 14853) {
         setNum2((prevCount) => prevCount + 100);
       } else {
         clearInterval(interval); // Stop the interval when num1 reaches 40
@@ -140,7 +140,7 @@ const Dashboard = () => {
   }, [num2]);
   useEffect(() => {
     const interval = setInterval(() => {
-      if (num3 < 10000) {
+      if (num3 < 27825 ) {
         setNum3((prevCount) => prevCount + 10);
       } else {
         clearInterval(interval); // Stop the interval when num1 reaches 40

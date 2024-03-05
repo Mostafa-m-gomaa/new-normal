@@ -1,6 +1,7 @@
 .pac-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
 }
 .pac-container .pa-card {
@@ -22,7 +23,6 @@
   padding: 5px;
   cursor: pointer;
   border-radius: 10px;
-  color: white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -51,6 +51,5 @@
     padding: 5px;
     cursor: pointer;
     border-radius: 10px;
-    color: white;
   }
 }/*# sourceMappingURL=profile.css.map */

@@ -127,7 +127,7 @@ const MarketingForm = () => {
             type="text"
             placeholder="الإجابة"
             required
-            minLength={50}
+            
             onChange={(e) => setValues(e.target.value, "ansOfQuestion")}
             className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           />
@@ -191,7 +191,7 @@ const MarketingForm = () => {
             className=" w-full py-2 bg-main border border-goldenGray px-6  rounded-md"
           >
             <option value="" disabled selected></option>
-            <option value="paytab">Paytab</option>
+            <option value="Bnak Transaction">Bank Transaction</option>
             <option value="crypto">crypto</option>
           </select>
         </div>
