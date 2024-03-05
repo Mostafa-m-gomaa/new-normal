@@ -42,19 +42,18 @@ const Login = () => {
             nav("/active")
             localStorage.removeItem("active");
                       }
+                      else if(!res.data.data.telegram){
+                        localStorage.removeItem("token")
+                        nav("/telegram-active");
+                      }
           else if(res.data.data.active){
      localStorage.setItem("active",res.data.data.active)
+     nav("/dashboard");
                       }
-         else if(!res.data.data.telegram){
-            localStorage.removeItem("token")
-            nav("/telegram-active");
-          }
+        
      
    
-          else{
-
-            nav("/dashboard");
-          }
+        
      
         }
       })

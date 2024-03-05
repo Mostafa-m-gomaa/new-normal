@@ -42,6 +42,7 @@ import BlogDetails from "./landingPage/BlogDetails";
 import Broker from "./dashboard/borker/Broker";
 import Weakly from "./dashboard/Weakly";
 import CoursePack from "./dashboard/coursePackage";
+import { Helmet } from 'react-helmet';
 // *******production
 export const route = "https://api.thenewnormal.trade/api/v1/";
 // export const route = "https://apiTest.wealthmakers-fx.com/api/v1/";
@@ -120,6 +121,10 @@ export default function App() {
       }}
     >
       <>
+      <Helmet>
+        <title>The New Normal</title>
+        <meta name="description" content="The New Normal" />
+      </Helmet>
         {loading && (
           <div className="fixed w-full h-full top-0 right-0 bg-[#000] z-[10000] bg-opacity-75 flex justify-center items-center">
             <LoadingSpinner />
