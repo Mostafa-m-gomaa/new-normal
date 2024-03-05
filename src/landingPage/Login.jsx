@@ -35,7 +35,7 @@ const Login = () => {
         toast.success("Done");
         if (res.data) {
           localStorage.setItem("data", JSON.stringify(res.data.data));
-          // localStorage.setItem("token", res.data.token);
+          localStorage.setItem("token", res.data.token);
           localStorage.setItem("id", res.data.data._id);
           if(!res.data.data.active){
             nav("/active")
