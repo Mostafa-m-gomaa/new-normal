@@ -12,15 +12,17 @@ const TreeMember = ({ data, level }) => {
   const [children, setChildren] = useState([]);
   const token = localStorage.getItem("token");
 
-  const getData = function () {
+  const getData = function (id) {
+   console.log(id)
     setIsLoading(true);
-    fetch(`${route}marketing/getMyChildren/${data?._id}`, {
+    fetch(`${route}marketing/getUserChildren/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
       .then((res) => res.json())
       .then((res) => {
+        console.log(res)
         if (res.data) setChildren(res.data);
         console.log(res.data);
       })
@@ -56,7 +58,7 @@ const TreeMember = ({ data, level }) => {
       {level <= 4 && (
         <button
           onClick={() => {
-            if (!show) getData();
+            if (!show) getData(data._id);
             setShow((prev) => !prev);
           }}
           className="absolute w-8 h-8 flex items-center justify-center bg-gold text-dark text-xl rounded-full bottom-0 right-0"
