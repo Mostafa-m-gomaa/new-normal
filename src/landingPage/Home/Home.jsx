@@ -10,7 +10,6 @@ const Home = () => {
       <LandingSection />
       <Packages />
       <OurProducts />
-
       <Courses />
       <Faqs />
     </>

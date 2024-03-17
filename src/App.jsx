@@ -42,7 +42,8 @@ import BlogDetails from "./landingPage/BlogDetails";
 import Broker from "./dashboard/borker/Broker";
 import Weakly from "./dashboard/Weakly";
 import CoursePack from "./dashboard/coursePackage";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom/dist";
 // *******production
 export const route = "https://api.thenewnormal.trade/api/v1/";
 // export const route = "https://apiTest.wealthmakers-fx.com/api/v1/";
@@ -50,6 +51,12 @@ export const route = "https://api.thenewnormal.trade/api/v1/";
 export const AppContext = createContext();
 
 export default function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   const token = localStorage.getItem("token");
   const [transOpen, setTransOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -121,10 +128,10 @@ export default function App() {
       }}
     >
       <>
-      <Helmet>
-        <title>The New Normal</title>
-        <meta name="description" content="The New Normal" />
-      </Helmet>
+        <Helmet>
+          <title>The New Normal</title>
+          <meta name="description" content="The New Normal" />
+        </Helmet>
         {loading && (
           <div className="fixed w-full h-full top-0 right-0 bg-[#000] z-[10000] bg-opacity-75 flex justify-center items-center">
             <LoadingSpinner />
@@ -135,7 +142,7 @@ export default function App() {
             transOpen ? "block" : "hidden"
           }`}
         >
-          <div className="bg-blackGold p-12 rounded-lg relative">
+          <div className="relative p-12 rounded-lg bg-blackGold">
             <div
               onClick={() => setTransOpen(false)}
               className="h-10 w-10 border border-gray rounded-full text-gray flex items-center justify-center absolute top-4 right-4 cursor-pointer hover:bg-dark hover:text-[#fff] transition"
@@ -179,7 +186,7 @@ export default function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/cart" element={<Cart />} />
             {/* <Route path="/education" element={<EducationCategories />} /> */}
-            <Route path="/education" element={<CoursePack/>} />
+            <Route path="/education" element={<CoursePack />} />
             <Route path="/viewPack/:catId" element={<Courses />} />
             <Route
               path="/viewPack/:catId/course/:bro/:courseId"

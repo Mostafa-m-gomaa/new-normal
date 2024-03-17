@@ -3,12 +3,9 @@ import imageOne from "../../assets/products/product_1.png";
 import imageTwo from "../../assets/products/product_2.png";
 import imageThree from "../../assets/products/product_3.png";
 import imageFour from "../../assets/products/product_4.png";
-import './landing.css'
+import "./landing.css";
 const OurProducts = () => {
   const products = [
-
-  
- 
     { image: imageFour, heading: "تعليم شامل للأسواق المالية ومدارس التحليل" },
     {
       image: imageTwo,
@@ -25,26 +22,23 @@ const OurProducts = () => {
       image: imageOne,
       heading: "ادوات استثمارية مساعدة",
       paragraph: "تحليلات الخبير للتطبيق",
-    } ,
-  
-  
+    },
   ];
   return (
     <section className="py-16 " id="productsSection">
-      <div className="our-pro container mx-auto">
+      <div className="container mx-auto our-pro">
         <div>
-          <div className="flex my-12 items-center gap-8">
+          <div className="flex items-center gap-8 my-12">
             <div className="flex-1">
-              <h2 className="leading-tight mx-auto text-2xl md:text-4xl lg:text-5xl">
+              <h2 className="mx-auto text-2xl leading-tight md:text-4xl lg:text-5xl">
                 الخدمات
               </h2>
             </div>
-
             <Link
               to={"/login"}
-              className="py-3 group hidden lg:flex items-center gap-2 rounded-full bg-mainText text-main text-sm font-medium px-6"
+              className="items-center hidden gap-2 px-6 py-3 text-sm font-medium rounded-full group lg:flex bg-mainText text-main"
             >
-              <i className="text-xs transition-all group-hover:translate-x-1 duration-300 fa-solid fa-angle-right"></i>
+              <i className="text-xs transition-all duration-300 group-hover:translate-x-1 fa-solid fa-angle-right"></i>
               <span>ابدأ الان</span>
             </Link>
           </div>
@@ -64,7 +58,7 @@ const OurProducts = () => {
                   alt=""
                 />{" "}
                 <div className="sm:w-[50%]">
-                  <h3 className="text-2xl md:text-3xl font-semibold ">
+                  <h3 className="text-2xl font-semibold md:text-3xl ">
                     {product.heading}
                   </h3>
                   <p className="my-8 text-sm sm:text-base">
@@ -76,19 +70,13 @@ const OurProducts = () => {
           </div> */}
           <div className="cards-cont">
             {products.map((product, index) => (
-              <div className="product-card border border-mainBorders" key={index}>
-                <img
-                  src={product.image}
-                 
-                />{" "}
-                
-                  <h3 className="text-mainText">
-                    {product.heading}
-                  </h3>
-                  <p>
-                    {product.paragraph}
-                  </p>
-               
+              <div
+                className="border product-card border-mainBorders"
+                key={index}
+              >
+                <img src={product.image} />{" "}
+                <h3 className="text-mainText">{product.heading}</h3>
+                <p>{product.paragraph}</p>
               </div>
             ))}
           </div>

@@ -13,7 +13,7 @@ const TreeMember = ({ data, level }) => {
   const token = localStorage.getItem("token");
 
   const getData = function (id) {
-   console.log(id)
+    console.log(id);
     setIsLoading(true);
     fetch(`${route}marketing/getUserChildren/${id}`, {
       headers: {
@@ -22,13 +22,14 @@ const TreeMember = ({ data, level }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
+        console.log(res);
         if (res.data) setChildren(res.data);
         console.log(res.data);
       })
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
   };
+  console.log(data);
   return (
     // <li>
     //   <div>
@@ -47,56 +48,56 @@ const TreeMember = ({ data, level }) => {
     //   </div>
     // </li>
     <li>
-    <div>
-      <img
-        src={data?.profileImg ? data?.profileImg : placeHolder}
-        onError={(e) => {
-          e.target.src = placeHolder;
-        }}
-      />
-      <span>{data?.name}</span>
-      {level <= 4 && (
-        <button
-          onClick={() => {
-            if (!show) getData(data._id);
-            setShow((prev) => !prev);
+      <div>
+        <img
+          src={data?.profileImg ? data?.profileImg : placeHolder}
+          onError={(e) => {
+            e.target.src = placeHolder;
           }}
-          className="absolute w-8 h-8 flex items-center justify-center bg-gold text-dark text-xl rounded-full bottom-0 right-0"
-        >
-          {show ? <IoIosRemove /> : <IoMdAdd />}
-        </button>
-      )}
-      <p className="absolute w-8 h-8 flex items-center justify-center bg-gold text-dark text-lg font-semibold rounded-full top-2 left-2">
-        {level}st
-      </p>
-      {data?.startMarketing && (
-        <Link
-          to={`/marketing/log/${data?._id}`}
-          className="absolute w-8 h-8 flex items-center justify-center bg-gold text-dark text-xl rounded-full bottom-0 left-0"
-        >
-          <FaEye />
-        </Link>
-      )}
-    </div>
-    {show && (
-      <ul>
-        {isLoading && "...يتم التحميل"}
-        {!isLoading && (
-          <>
-            {children.length === 0
-              ? "لا يوجد المزيد"
-              : children.map((child) => (
-                  <TreeMember
-                    level={level + 1}
-                    data={child}
-                    key={child._id}
-                  />
-                ))}
-          </>
+        />
+        <span>{data?.name}</span>
+        {level <= 4 && (
+          <button
+            onClick={() => {
+              if (!show) getData(data._id);
+              setShow((prev) => !prev);
+            }}
+            className="absolute bottom-0 right-0 flex items-center justify-center w-8 h-8 text-xl rounded-full bg-gold"
+          >
+            {show ? <IoIosRemove /> : <IoMdAdd />}
+          </button>
         )}
-      </ul>
-    )}
-  </li>
+        <p className="absolute flex items-center justify-center w-8 h-8 text-lg font-semibold rounded-full bg-gold top-2 left-2">
+          {level}st
+        </p>
+        {data?.startMarketing && (
+          <Link
+            to={`/marketing/log/${data?._id}`}
+            className="absolute bottom-0 left-0 flex items-center justify-center w-8 h-8 text-xl rounded-full bg-gold text-dark"
+          >
+            <FaEye />
+          </Link>
+        )}
+      </div>
+      {show && (
+        <ul>
+          {isLoading && "...يتم التحميل"}
+          {!isLoading && (
+            <>
+              {children.length === 0
+                ? "لا يوجد المزيد"
+                : children.map((child) => (
+                    <TreeMember
+                      level={level + 1}
+                      data={child}
+                      key={child._id}
+                    />
+                  ))}
+            </>
+          )}
+        </ul>
+      )}
+    </li>
   );
 };
 

@@ -14,6 +14,7 @@ const Analytic = () => {
   const container = useRef();
   const { setLoading } = useContext(AppContext);
   const contianer = useRef();
+  const ecoRef = useRef();
   const nav = useNavigate();
   const token = localStorage.getItem("token");
 
@@ -73,6 +74,13 @@ const Analytic = () => {
         }`;
     container.current.appendChild(script);
   }, []);
+  useEffect(() => {
+    if (ecoRef.current) {
+      ecoRef.current.scrollTo({
+        left: 0,
+      });
+    }
+  }, [ecoRef]);
   return (
     <>
       <DashHeader />
@@ -93,7 +101,7 @@ const Analytic = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col-reverse lg:flex-row container mx-auto">
+        <div className="container flex flex-col-reverse mx-auto lg:flex-row">
           <div className="w-[100%] p-4">
             <div>
               {posts?.map((post) => {
@@ -101,11 +109,11 @@ const Analytic = () => {
               })}
             </div>
             {pagesNumber > 1 && (
-              <div className="bg-blackGold p-4 rounded-xl">
+              <div className="p-4 bg-blackGold rounded-xl">
                 <h2 className="text-xl text-center">
                   هناك {pagesNumber} صفحات
                 </h2>
-                <div className="flex w-fit items-center justify-center border mx-auto border-lightGray rounded-xl">
+                <div className="flex items-center justify-center mx-auto border w-fit border-lightGray rounded-xl">
                   <button
                     className={`rounded-r-xl p-3 text-center disabled:cursor-not-allowed w-[90px] bg-gold text-dark disabled:bg-gray`}
                     disabled={currentPage === 1}
@@ -138,7 +146,7 @@ const Analytic = () => {
             )}
           </div>
           <div className="w-full lg:w-[450px] xl:w-[650px]   px-2 md:px-4 rounded-xls mt-8">
-            <div className="bg-blackGold p-6 rounded-2xl mb-4">
+            <div className="p-6 mb-4 bg-blackGold rounded-2xl">
               <div className=" max-w-[100%] overflow-auto">
                 <EconomicCalendar />
               </div>

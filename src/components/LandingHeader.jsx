@@ -6,7 +6,7 @@ import ThemeChanger from "./ThemeChanger";
 import { AppContext } from "../App";
 const LandingHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const {theme}=useContext(AppContext)
+  const { theme } = useContext(AppContext);
 
   const token = localStorage.getItem("token");
   useEffect(() => {
@@ -37,37 +37,37 @@ const LandingHeader = () => {
 
   return (
     <>
-      <div className="bg-main sticky top-0 z-50 landingNav">
-        <div className="flex  justify-between container mx-auto items-center">
-          <div className="hidden lg:flex items-center justify-center gap-2">
+      <div className="sticky top-0 z-50 bg-main landingNav">
+        <div className="container flex items-center justify-between mx-auto">
+          <div className="items-center justify-center hidden gap-2 lg:flex">
             {!token ? (
               <Link
                 to={"/login"}
-                className="py-3 group flex items-center gap-2 rounded-full bg-mainText text-main text-sm font-medium px-6"
+                className="flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-full group bg-mainText text-main"
               >
-                <i className="text-xs transition-all group-hover:translate-x-1 duration-300 fa-solid fa-angle-right"></i>
+                <i className="text-xs transition-all duration-300 group-hover:translate-x-1 fa-solid fa-angle-right"></i>
                 <span>ابدأ الان</span>
               </Link>
             ) : (
               <Link
                 to={"/dashboard"}
-                className="py-3 group flex items-center gap-2 rounded-full bg-mainText text-main text-sm font-medium px-6"
+                className="flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-full group bg-mainText text-main"
               >
-                <i className="text-xs transition-all group-hover:translate-x-1 duration-300 fa-solid fa-angle-right"></i>
+                <i className="text-xs transition-all duration-300 group-hover:translate-x-1 fa-solid fa-angle-right"></i>
                 <span>اذهب للصفحة الرئيسية</span>
               </Link>
             )}
             <ThemeChanger />
           </div>
           <button
-            className="lg:hidden text-4xl"
+            className="text-4xl lg:hidden"
             onClick={() => {
               setIsOpen(true);
             }}
           >
             <i className="fa-solid fa-bars"></i>
           </button>
-          <ul className="hidden lg:flex items-center justify-center gap-6 text-sm font-semibold">
+          <ul className="items-center justify-center hidden gap-6 text-sm font-semibold lg:flex">
             {links.map((link) => (
               <li key={link.id}>
                 <Link
@@ -81,20 +81,21 @@ const LandingHeader = () => {
               </li>
             ))}
           </ul>
-{theme === "dark" ?
-<Link to={"/"}>
-            <img src={logoone} className="h-16" alt="" />
-          </Link>
-:<Link to={"/"}>
-<img src={logo} className="h-16" alt="" />
-</Link>}
-          
+          {theme === "dark" ? (
+            <Link to={"/"}>
+              <img src={logoone} className="h-16" alt="" />
+            </Link>
+          ) : (
+            <Link to={"/"}>
+              <img src={logo} className="h-16" alt="" />
+            </Link>
+          )}
         </div>
         {isOpen && (
-          <div className="fixed w-full h-full top-0 left-0 flex">
-            <div className="bg-main w-fit p-12 max-h-screen overflow-auto">
+          <div className="fixed top-0 left-0 flex w-full h-full">
+            <div className="max-h-screen p-12 overflow-auto bg-main w-fit">
               <button
-                className="block w-fit mx-auto mb-4 text-4xl"
+                className="block mx-auto mb-4 text-4xl w-fit"
                 onClick={() => {
                   setIsOpen(false);
                 }}
@@ -105,9 +106,10 @@ const LandingHeader = () => {
                 {links.map((link) => (
                   <li key={link.id}>
                     <Link
-                      className="border-b border-mainBorders text-center pb-4 block"
+                      className="block pb-4 text-center border-b border-mainBorders"
                       onClick={() => {
                         scrollToId(link.id);
+                        setIsOpen(false);
                       }}
                       to={link.target}
                     >
@@ -118,12 +120,20 @@ const LandingHeader = () => {
               </ul>
               <Link
                 to={"/login"}
-                className="py-3 group  items-center gap-2 rounded-full bg-mainText mx-auto block w-fit text-main text-sm font-medium px-6"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className="items-center block gap-2 px-6 py-3 mx-auto text-sm font-medium rounded-full group bg-mainText w-fit text-main"
               >
-                <i className="text-xs transition-all group-hover:translate-x-1 duration-300 fa-solid fa-angle-right"></i>
+                <i className="text-xs transition-all duration-300 group-hover:translate-x-1 fa-solid fa-angle-right"></i>
                 <span>ابدأ الان</span>
               </Link>
-              <div className="w-fit my-4 mx-auto">
+              <div
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className="mx-auto my-4 w-fit"
+              >
                 <ThemeChanger />
               </div>
             </div>
@@ -132,7 +142,7 @@ const LandingHeader = () => {
                 setIsOpen(false);
               }}
               style={{ backdropFilter: "blur(10px)" }}
-              className="cursor-pointer flex-1"
+              className="flex-1 cursor-pointer"
             />
           </div>
         )}

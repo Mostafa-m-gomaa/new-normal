@@ -15,18 +15,18 @@ const LegalAndPrivacy = () => {
       <section className="my-16">
         <div className="container mx-auto">
           <div>
-            <div className="flex my-12 items-center gap-8">
+            <div className="flex items-center gap-8 my-12">
               <div className="flex-1">
-                <h2 className="leading-tight p-4 border-b-2 mx-auto text-2xl md:text-4xl lg:text-5xl">
+                <h2 className="p-4 mx-auto text-2xl leading-tight border-b-2 md:text-4xl lg:text-5xl">
                   القوانين والخصوصية
                 </h2>
-                <h2 className="leading-tight p-4  mx-auto text-2xl md:text-4xl lg:text-5xl">
+                <h2 className="p-4 mx-auto text-2xl leading-tight md:text-4xl lg:text-5xl">
                   الترخيص
                 </h2>
               </div>
             </div>
-            <div className="relative mt-32 flex justify-center	">
-              <img src={legal} alt="" />
+            <div className="relative flex justify-center mt-32 ">
+              <img src={legal} alt="" className="px-8" />
               {/* {products.map((product, index) => (
                 <div
                   key={index}
@@ -42,7 +42,7 @@ const LegalAndPrivacy = () => {
                     alt=""
                   />{" "}
                   <div className="sm:w-[50%]">
-                    <h3 className="text-2xl md:text-3xl font-semibold ">
+                    <h3 className="text-2xl font-semibold md:text-3xl ">
                       Committee located in Tyttenhanger Parks
                     </h3>
                     <p className="my-8 text-sm sm:text-base">
@@ -51,7 +51,7 @@ const LegalAndPrivacy = () => {
                       and historic Tyttenhanger Park, St Albans, Hertfordshire,
                       AL4 0PG
                     </p>
-                    <p className="text-mainBorders text-sm sm:text-base">
+                    <p className="text-sm text-mainBorders sm:text-base">
                       Our choice of location in Tyttenhanger Park speaks volumes
                       about our commitment to providing a serene and focused
                       environment for our team
@@ -62,7 +62,7 @@ const LegalAndPrivacy = () => {
             </div>
           </div>
         </div>
-        <div className="container py-16 legal space-y-6">
+        <div className="container py-16 space-y-6 legal">
           <h2>الشروط والأحكام</h2>
           <b>تاريخ النفاذ : 2023 ,11 March</b>
           <p>
