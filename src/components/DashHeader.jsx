@@ -8,7 +8,7 @@ import ThemeChanger from "./ThemeChanger";
 import { AppContext } from "../App";
 const DashHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const {theme}=useContext(AppContext)
+  const { theme } = useContext(AppContext);
   const links = [
     { label: "الرئيسة", link: "/dashboard" },
     { label: "الدورات", link: "/education" },
@@ -19,40 +19,47 @@ const DashHeader = () => {
     { label: "المتجر", link: "/store" },
   ];
   return (
-    <div className="border-b border-b-gray py-2">
-      <div className="px-2 md:px-4 container mx-auto flex justify-between gap-8 py-3 items-center">
-        <div className="hidden lg:flex items-center justify-center gap-2">
+    <div className="py-2 border-b border-b-gray">
+      <div className="container flex items-center justify-between gap-8 px-2 py-3 mx-auto md:px-4">
+        <div className="items-center justify-center hidden gap-2 lg:flex">
           <ProfileMenu />
           <ThemeChanger />
         </div>
         <div
-          className="lg:hidden cursor-pointer"
+          className="cursor-pointer lg:hidden"
           onClick={() => setIsOpen(true)}
         >
-          <i className="fa-solid fa-bars text-4xl"></i>
+          <i className="text-4xl fa-solid fa-bars"></i>
         </div>
 
         {isOpen && (
-          <div className="fixed w-full h-full z-20 top-0 left-0 flex">
-            <div className="bg-main w-fit p-12 max-h-screen overflow-auto">
+          <div className="fixed top-0 left-0 z-20 flex w-full h-full">
+            <div className="max-h-screen p-12 overflow-auto bg-main w-fit">
               <button
-                className="block w-fit mx-auto mb-4 text-4xl"
+                className="block mx-auto mb-4 text-4xl w-fit"
                 onClick={() => {
                   setIsOpen(false);
                 }}
               >
                 <i className="fa-solid fa-xmark"></i>
               </button>
-              {theme === "dark" ?  <Link to={"/dashboard"}>
-                <img src={logoone} alt="Logo" className="h-24 mx-auto mb-4" />
-              </Link> :  <Link to={"/dashboard"}>
-                <img src={logo} alt="Logo" className="h-24 mx-auto mb-4" />
-              </Link> }
-            
+              {theme === "dark" ? (
+                <Link to={"/dashboard"}>
+                  <img src={logoone} alt="Logo" className="h-24 mx-auto mb-4" />
+                </Link>
+              ) : (
+                <Link to={"/dashboard"}>
+                  <img src={logo} alt="Logo" className="h-24 mx-auto mb-4" />
+                </Link>
+              )}
+
               <ul className="flex flex-col mb-4  min-w-[200px] gap-4 text-xl font-semibold">
                 {links.map((link) => (
                   <li key={link.id}>
                     <NavLink
+                      onClick={() => {
+                        setIsOpen(false);
+                      }}
                       className={({ isActive }) =>
                         `${
                           isActive ? "border-b-gold" : "hover:border-b-gold"
@@ -65,8 +72,14 @@ const DashHeader = () => {
                   </li>
                 ))}
               </ul>
+
               <ProfileMenu />
-              <div className="my-2 w-fit mx-auto">
+              <div
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className="mx-auto my-2 w-fit"
+              >
                 <ThemeChanger />
               </div>
             </div>
@@ -75,11 +88,11 @@ const DashHeader = () => {
                 setIsOpen(false);
               }}
               style={{ backdropFilter: "blur(10px)" }}
-              className="cursor-pointer flex-1"
+              className="flex-1 cursor-pointer"
             />
           </div>
         )}
-        <ul className=" hidden lg:flex items-center justify-center gap-2">
+        <ul className="items-center justify-center hidden gap-2 lg:flex">
           {links.map((link, i) => (
             <li key={i}>
               <NavLink
@@ -93,12 +106,15 @@ const DashHeader = () => {
             </li>
           ))}
         </ul>
-        {theme === "dark" ?    <Link to={"/dashboard"}>
-          <img src={logoone} alt="Logo" className="h-10" />
-        </Link>:   <Link to={"/dashboard"}>
-          <img src={logo} alt="Logo" className="h-10" />
-        </Link>}
-      
+        {theme === "dark" ? (
+          <Link to={"/dashboard"}>
+            <img src={logoone} alt="Logo" className="h-10" />
+          </Link>
+        ) : (
+          <Link to={"/dashboard"}>
+            <img src={logo} alt="Logo" className="h-10" />
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -106,7 +122,6 @@ const DashHeader = () => {
 
 export default DashHeader;
 
-
 // ${
 //   isActive ? "bg-gold" : "hover:bg-gold transition-all"
-// } 
+// }
