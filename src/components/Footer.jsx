@@ -125,7 +125,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="mt-6 text-sm text-center">
-        جميع الحقوق محفوظة © 2022 The New Normal.
+        جميع الحقوق محفوظة © 2024 The New Normal.
       </p>
     </div>
   );
