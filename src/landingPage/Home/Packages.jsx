@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { route } from "../../App";
-import PackageCard from "../../components/PackageCard";
 
 const Packages = () => {
   const [packages, setPackages] = useState([]);

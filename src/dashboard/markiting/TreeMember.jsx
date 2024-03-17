@@ -62,12 +62,12 @@ const TreeMember = ({ data, level }) => {
               if (!show) getData(data._id);
               setShow((prev) => !prev);
             }}
-            className="absolute bottom-0 right-0 flex items-center justify-center w-8 h-8 text-xl rounded-full bg-gold"
+            className="absolute bottom-0 right-0 flex items-center justify-center w-8 h-8 text-xl text-white rounded-full bg-gold"
           >
             {show ? <IoIosRemove /> : <IoMdAdd />}
           </button>
         )}
-        <p className="absolute flex items-center justify-center w-8 h-8 text-lg font-semibold rounded-full bg-gold top-2 left-2">
+        <p className="absolute flex items-center justify-center w-8 h-8 text-lg font-semibold text-white rounded-full bg-gold top-2 left-2">
           {level}st
         </p>
         {data?.startMarketing && (

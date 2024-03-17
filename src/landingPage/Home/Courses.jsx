@@ -35,21 +35,23 @@ const Courses = () => {
   return (
     <section className="pt-16" id="coursesSection">
       <div className="container ">
-        <h2 className="flex-1 leading-tight mx-auto  md:text-4xl text-3xl lg:text-5xl text-center mb-10">
-         الباقات{" "}
+        <h2 className="flex-1 mx-auto mb-10 text-3xl leading-tight text-center md:text-4xl lg:text-5xl">
+          الباقات{" "}
         </h2>
         <br />
         <br />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses?.map((item, ind) => (
-           item.type === "package" ?  <AnotherCard key={item._id} ind={ind} data={item} />:null
-          ))}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {courses?.map((item, ind) =>
+            item.type === "package" ? (
+              <AnotherCard key={item._id} ind={ind} data={item} />
+            ) : null
+          )}
         </div>
         {/* <div className="max-w-[95vw] mx-auto overflow-x-auto overflow-y-visible my-16">
           <table className="w-full ">
             <thead className="whitespace-nowrap">
               <tr>
-                <th className=" p-6 "></th>
+                <th className="p-6 "></th>
                 {courses.map((course) => (
                   <th className="p-6" key={course._id}>
                     {course.title}
@@ -59,82 +61,82 @@ const Courses = () => {
             </thead>
             <tbody className="border-4 border-mainBorders bg-betMain">
               <tr>
-                <td className="border border-mainBorders p-6 ">سعر الكورس</td>
+                <td className="p-6 border border-mainBorders ">سعر الكورس</td>
 
                 {courses.map((course) => (
                   <td
                     key={course._id}
-                    className="border border-mainBorders p-6 "
+                    className="p-6 border border-mainBorders "
                   >
                     {course.price}$
                   </td>
                 ))}
               </tr>
               <tr>
-                <td className="border border-mainBorders p-6 ">
+                <td className="p-6 border border-mainBorders ">
                   مده صلاحية الكورس
                 </td>
 
                 {courses.map((course) => (
                   <td
                     key={course._id}
-                    className="border border-mainBorders p-6 "
+                    className="p-6 border border-mainBorders "
                   >
                     {convertTime(course.expirationTime)}
                   </td>
                 ))}
               </tr>
               <tr>
-                <td className="border border-mainBorders p-6 ">
+                <td className="p-6 border border-mainBorders ">
                   سعر إعاده التجديد
                 </td>
 
                 {courses.map((course) => (
                   <td
                     key={course._id}
-                    className="border border-mainBorders p-6 "
+                    className="p-6 border border-mainBorders "
                   >
                     {course.renewPrice}$
                   </td>
                 ))}
               </tr>
               <tr>
-                <td className="border border-mainBorders p-6 ">وصف الكورس</td>
+                <td className="p-6 border border-mainBorders ">وصف الكورس</td>
 
                 {courses.map((course) => (
                   <td
                     key={course._id}
-                    className="border border-mainBorders p-6 "
+                    className="p-6 border border-mainBorders "
                   >
                     {course.description}
                   </td>
                 ))}
               </tr>
               <tr>
-                <td className="border border-mainBorders p-6 ">
+                <td className="p-6 border border-mainBorders ">
                   قنوات التيليجرام
                 </td>
 
                 {courses.map((course) => (
                   <td
                     key={course._id}
-                    className="border border-mainBorders p-6 "
+                    className="p-6 border border-mainBorders "
                   >
                     {course?.telegramChannelNames?.join(" - ")}
                   </td>
                 ))}
               </tr>
               <tr>
-                <td className="border border-mainBorders p-6 ">شراء الكورس</td>
+                <td className="p-6 border border-mainBorders ">شراء الكورس</td>
 
                 {courses.map((course) => (
                   <td
                     key={course._id}
-                    className="border border-mainBorders p-6 "
+                    className="p-6 border border-mainBorders "
                   >
                     <Link
                       to="/login"
-                      className="px-4 py-1 whitespace-nowrap rounded-full text-main bg-mainText  text-lg "
+                      className="px-4 py-1 text-lg rounded-full whitespace-nowrap text-main bg-mainText "
                     >
                       اشتري الان
                     </Link>
@@ -146,22 +148,22 @@ const Courses = () => {
         </div> */}
       </div>
       {/* <div className="container relative">
-        <div className="flex items-center justify-center w-full h-full absolute">
-          <div className="flex flex-col  gap-6 md:gap-8 lg:gap-12 text-center justify-center">
+        <div className="absolute flex items-center justify-center w-full h-full">
+          <div className="flex flex-col justify-center gap-6 text-center md:gap-8 lg:gap-12">
             <Link
               href="/"
-              className="md:text-5xl sm:text-4xl text-3xl lg:text-6xl font-semibold"
+              className="text-3xl font-semibold md:text-5xl sm:text-4xl lg:text-6xl"
             >
               <img src={logo} alt="" className="w-32 mx-auto" />
             </Link>
-            <h2 className="md:text-3xl sm:text-2xl text-xl lg:text-4xl font-semibold">
+            <h2 className="text-xl font-semibold md:text-3xl sm:text-2xl lg:text-4xl">
               GET USED TO THE FUTURE
             </h2>
             <Link
               to={"/login"}
-              className="py-3 group hidden lg:flex w-fit mx-auto items-center gap-2 rounded-full bg-mainText text-main text-sm font-medium px-6"
+              className="items-center hidden gap-2 px-6 py-3 mx-auto text-sm font-medium rounded-full group lg:flex w-fit bg-mainText text-main"
             >
-              <i className="text-xs transition-all group-hover:translate-x-1 duration-300 fa-solid fa-angle-right"></i>
+              <i className="text-xs transition-all duration-300 group-hover:translate-x-1 fa-solid fa-angle-right"></i>
               <span>ابدأ الان</span>
             </Link>
           </div>
