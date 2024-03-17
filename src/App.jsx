@@ -83,6 +83,7 @@ export default function App() {
           },
         })
         .then((res) => {
+          console.log(res);
           setCart(res.data.data);
         })
         .catch((err) => {
@@ -106,6 +107,7 @@ export default function App() {
           },
         })
         .then((res) => {
+          console.log(res);
           if (res.data.data) {
             localStorage.setItem("data", JSON.stringify(res.data.data));
           }

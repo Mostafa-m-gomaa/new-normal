@@ -17,8 +17,11 @@ const Broker = () => {
         },
       })
       .then((res) => {
-        console.log(res.data.data);
-        setData(res.data.data);
+   
+        if (res.data.data){
+
+          setData(res.data.data);
+        }
       })
       .catch((err) => {
         console.log(err);
