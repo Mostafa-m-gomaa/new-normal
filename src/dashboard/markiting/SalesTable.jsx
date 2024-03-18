@@ -92,6 +92,7 @@
 
 // export default SalesTable;
 const SalesTable = ({ data }) => {
+  console.log(data);
   return (
     <div className="max-w-full overflow-auto w-full">
       <table className="text-center w-full my-6">
@@ -109,6 +110,8 @@ const SalesTable = ({ data }) => {
             <tr key={item._id}>
               <td className=" border border-gray p-2">${item.amount}</td>
               <td className=" border border-gray p-2">{item.package}</td>
+              <td className=" border border-gray p-2">{item.packageType}</td>
+              <td className=" border border-gray p-2">{item.packageType}</td>
               <td className=" border border-gray p-2">{item.packageType}</td>
               <td className=" border border-gray p-2">
                 {item.child?.telegram?.telegramName}

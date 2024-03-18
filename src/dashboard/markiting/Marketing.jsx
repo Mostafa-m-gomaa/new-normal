@@ -15,6 +15,7 @@ const Marketing = ({ myLog }) => {
   const userId = useParams()?.id;
   const [myData, setMyData] = useState({});
   useEffect(() => {
+    console.log(myLog);
     if (myLog) {
       if (data.startMarketing === false) startMarketingFun();
       else getData();
@@ -40,6 +41,7 @@ const Marketing = ({ myLog }) => {
   };
 
   const getData = function () {
+
     setLoading(true);
     fetch(
       `${route}marketing/${
@@ -54,7 +56,7 @@ const Marketing = ({ myLog }) => {
       .then((res) => res.json())
       .then((res) => {
         setMyData(res.marketLog);
-        console.log(res.marketLog);
+        console.log(res);
         if (res.marketLog.role && myLog) {
           data.role = res.marketLog.role;
           localStorage.setItem("data", JSON.stringify(data));
@@ -87,7 +89,7 @@ const Marketing = ({ myLog }) => {
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               <div className="border space-y-2 border-gray rounded-md p-6">
                 <h4 className="px-6 w-fit mx-auto border-b border-b-gray pb-2 mb-4 text-xl font-semibold">
-                  إجمالي المبيعات
+                    إجمالي المبيعات لهذا الشهر
                 </h4>
                 <div className="flex">
                   <div className="flex-col w-full  flex gap-4 items-center">
@@ -102,7 +104,7 @@ const Marketing = ({ myLog }) => {
               </div>
               <div className="border space-y-2 border-gray rounded-md p-6">
                 <h4 className="px-6 w-fit mx-auto border-b border-b-gray pb-2 mb-4 text-xl font-semibold">
-                  نسبة الربح{" "}
+                  نسبة الربح لهذا الشهر{" "} 
                 </h4>
                 <div className="flex">
                   <div className="flex-col w-full  flex gap-4 items-center">
@@ -117,7 +119,7 @@ const Marketing = ({ myLog }) => {
               </div>
               <div className="border space-y-2 border-gray rounded-md p-6">
                 <h4 className="px-6 w-fit mx-auto border-b border-b-gray pb-2 mb-4 text-xl font-semibold">
-                  إجمالي الربح
+                  إجمالي الربح لهذا الشهر
                 </h4>
                 <div className="flex">
                   <div className="flex-col w-full  flex gap-4 items-center">

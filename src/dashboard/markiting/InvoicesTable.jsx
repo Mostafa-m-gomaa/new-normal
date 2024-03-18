@@ -9,6 +9,8 @@ const InvoicesTable = ({ data, getData }) => {
   const [reqInvoice, setReqInvoice] = useState({});
   const [paymentMethod, setPaymentMethod] = useState("");
   const [email, setEmail] = useState("");
+  console.log(data)
+  
   const sendRequest = function (e) {
     e.preventDefault();
 
