@@ -111,11 +111,9 @@ const SalesTable = ({ data }) => {
               <td className=" border border-gray p-2">${item.amount}</td>
               <td className=" border border-gray p-2">{item.package}</td>
               <td className=" border border-gray p-2">{item.packageType}</td>
-              <td className=" border border-gray p-2">{item.packageType}</td>
-              <td className=" border border-gray p-2">{item.packageType}</td>
-              <td className=" border border-gray p-2">
-                {item.child?.telegram?.telegramName}
-              </td>
+              <td className=" border border-gray p-2">{item.child.telegram.telegramUserName}</td>
+            
+         
 
               <td className=" border border-gray p-2">
                 {new Date(item.Date).toLocaleDateString()}
